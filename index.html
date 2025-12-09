@@ -6,45 +6,33 @@
     <meta name="description" content="Diseño de páginas web profesionales para comercios en Argentina. +50 clientes satisfechos. Sitios responsive, modernos y optimizados. Desde $50.000 ARS. Llevá tu negocio al mundo digital.">
     <meta name="keywords" content="diseño web lanús, páginas web argentina, desarrollo web buenos aires, sitios web responsive, diseño web profesional, tienda online argentina">
     <meta name="author" content="Diseño Web para Comercios">
-
-    <!-- TODO: Actualizar con tu URL real cuando tengas el dominio -->
+    
     <meta property="og:title" content="Diseño Web para Comercios | +50 Clientes Satisfechos">
     <meta property="og:description" content="Páginas web profesionales que atraen clientes y aumentan tus ventas. Diseños modernos y responsive desde $50.000 ARS">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://TU-DOMINIO-AQUI.vercel.app">
-    <meta property="og:image" content="https://TU-DOMINIO-AQUI.vercel.app/og-image.jpg">
-
+    <meta property="og:url" content="https://disenowebcomercioslanus.vercel.app">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Diseño Web para Comercios">
     <meta name="twitter:description" content="Llevá tu comercio al mundo digital con páginas web profesionales">
-
+    
     <title>Diseño Web para Comercios | +50 Clientes | Desde $50.000</title>
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- TODO: Descomentar y agregar tu ID de Google Analytics -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
-
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Diseño Web para Comercios",
       "description": "Diseño de páginas web profesionales para comercios",
-      "url": "https://TU-DOMINIO-AQUI.vercel.app",
+      "url": "https://disenowebcomercioslanus.vercel.app",
       "telephone": "+54-9-11-7364-0915",
       "priceRange": "$50000-$250000",
       "address": {
@@ -60,7 +48,7 @@
       }
     }
     </script>
-
+    
     <style>
         * {
             margin: 0;
@@ -118,7 +106,7 @@
         }
         .skip-link:focus { top: 0; }
 
-        /* HEADER STICKY MEJORADO */
+        /* HEADER STICKY */
         .header {
             position: fixed;
             top: 0;
@@ -146,7 +134,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            z-index: 1001;
         }
 
         .nav-links {
@@ -177,38 +164,6 @@
         .nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
-        }
-
-        /* MENÚ HAMBURGER MEJORADO */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 1001;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--primary);
-            transition: all 0.3s;
-            border-radius: 2px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         /* HERO MEJORADO */
@@ -251,12 +206,17 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(239, 68, 68, 0.85);
+            background: rgba(239, 68, 68, 0.9);
             padding: 12px 25px;
             border-radius: 30px;
             margin-bottom: 25px;
             font-weight: 600;
-            animation: fadeInDown 1s ease;
+            animation: fadeInDown 1s ease, pulse-urgency 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-urgency {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         @keyframes fadeInDown {
@@ -354,34 +314,7 @@
             opacity: 0.9;
         }
 
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .countdown-item {
-            text-align: center;
-            background: rgba(255,255,255,0.15);
-            padding: 15px 20px;
-            border-radius: 10px;
-            min-width: 75px;
-            backdrop-filter: blur(5px);
-        }
-
-        .countdown-number {
-            font-size: 2em;
-            font-weight: 800;
-            display: block;
-        }
-
-        .countdown-label {
-            font-size: 0.85em;
-            opacity: 0.9;
-        }
-
+        /* COMPARACIÓN CON/SIN WEB */
         .comparison {
             padding: 80px 20px;
             background: var(--gray-50);
@@ -405,9 +338,6 @@
             font-size: 1.2em;
             color: var(--gray-700);
             margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .comparison-grid {
@@ -459,13 +389,13 @@
         .comparison-list li::before {
             content: "❌";
             font-size: 1.2em;
-            flex-shrink: 0;
         }
 
         .comparison-card.with .comparison-list li::before {
             content: "✅";
         }
 
+        /* PROCESO */
         .process {
             padding: 80px 20px;
             background: white;
@@ -538,6 +468,7 @@
             margin-bottom: 15px;
         }
 
+        /* FEATURES MEJORADO */
         .features {
             padding: 80px 20px;
             background: var(--gray-50);
@@ -589,6 +520,7 @@
             color: var(--primary);
         }
 
+        /* PORTFOLIO MEJORADO */
         .portfolio {
             padding: 80px 20px;
             background: white;
@@ -631,11 +563,6 @@
             box-shadow: var(--shadow-lg);
             transition: all 0.3s ease;
             border: 2px solid var(--gray-100);
-            display: none;
-        }
-
-        .portfolio-item.show {
-            display: block;
         }
 
         .portfolio-item:hover {
@@ -712,6 +639,7 @@
             font-weight: 600;
         }
 
+        /* TESTIMONIALS MEJORADO */
         .testimonials {
             padding: 80px 20px;
             background: var(--gray-50);
@@ -801,6 +729,7 @@
             margin-top: 5px;
         }
 
+        /* FAQ */
         .faq {
             padding: 80px 20px;
             background: white;
@@ -862,9 +791,15 @@
             padding: 0 25px 25px;
         }
 
+        /* PRICING MEJORADO */
         .pricing {
             padding: 80px 20px;
             background: var(--gray-50);
+        }
+
+        .pricing-toggle {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .pricing-grid {
@@ -987,6 +922,77 @@
             margin-top: 15px;
         }
 
+        /* LEAD MAGNET */
+        .lead-magnet {
+            padding: 80px 20px;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .lead-magnet h2 {
+            color: white;
+        }
+
+        .lead-content {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .lead-benefits {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .lead-benefits li {
+            padding: 12px 0;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            font-size: 1.1em;
+        }
+
+        .lead-benefits li::before {
+            content: "📋";
+            font-size: 1.5em;
+        }
+
+        .lead-form {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .lead-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+        }
+
+        .lead-btn {
+            padding: 15px 40px;
+            background: white;
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .lead-btn:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* CONTACT MEJORADO */
         .contact {
             padding: 80px 20px;
             background: white;
@@ -1117,19 +1123,6 @@
             cursor: not-allowed;
         }
 
-        .form-success {
-            background: var(--success);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            display: none;
-        }
-
-        .form-success.show {
-            display: block;
-        }
-
         .privacy-notice {
             font-size: 0.9em;
             color: var(--gray-700);
@@ -1137,6 +1130,7 @@
             text-align: center;
         }
 
+        /* FOOTER */
         footer {
             background: var(--dark);
             color: white;
@@ -1191,8 +1185,6 @@
             justify-content: center;
             font-size: 1.3em;
             transition: all 0.3s;
-            text-decoration: none;
-            color: white;
         }
 
         .social-link:hover {
@@ -1207,6 +1199,7 @@
             color: var(--gray-300);
         }
 
+        /* FLOATING ELEMENTS */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -1237,6 +1230,7 @@
             box-shadow: 0 15px 50px rgba(37, 211, 102, 0.5);
         }
 
+        /* COOKIE CONSENT */
         .cookie-banner {
             position: fixed;
             bottom: 0;
@@ -1285,6 +1279,7 @@
             color: white;
         }
 
+        /* LOADING SPINNER */
         .spinner {
             display: inline-block;
             width: 20px;
@@ -1299,32 +1294,37 @@
             to { transform: rotate(360deg); }
         }
 
+        /* COUNTDOWN TIMER */
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .countdown-item {
+            text-align: center;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-size: 2em;
+            font-weight: 800;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 968px) {
             .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(255,255,255,0.98);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                padding: 50px 20px;
-                gap: 20px;
-                transition: left 0.3s;
-                box-shadow: var(--shadow-xl);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links a {
-                font-size: 1.3em;
-            }
-
-            .hamburger {
-                display: flex;
+                display: none;
             }
 
             .contact-wrapper {
@@ -1346,6 +1346,10 @@
             .process-step:nth-child(even) {
                 flex-direction: row;
             }
+
+            .lead-form {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 640px) {
@@ -1365,60 +1369,48 @@
                 flex-direction: column;
                 text-align: center;
             }
-
-            .countdown-item {
-                min-width: 70px;
-                padding: 12px 15px;
-            }
-
-            .countdown-number {
-                font-size: 1.6em;
-            }
         }
     </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
+    <!-- HEADER STICKY -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">WebPro</div>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="#proceso">Proceso</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#precios">Precios</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Consulta Gratis</a>
-            <button class="hamburger" id="hamburger" aria-label="Menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero" role="banner">
         <div class="hero-content">
             <div class="urgency-banner" data-aos="fade-down">
-                🔥 Cupos limitados para Diciembre 2024
+                🔥 Solo 2 cupos disponibles para Diciembre 2024
             </div>
             <div class="trust-badge" data-aos="fade-up" data-aos-delay="100">
-                ⭐ +50 Comercios Nos Recomiendan
+                ⭐ +52 Comercios Confían en Nosotros
             </div>
             <h1 data-aos="fade-up" data-aos-delay="200">
                 Llevá tu Comercio al Mundo Digital y <span style="text-decoration: underline;">Aumentá tus Ventas</span>
             </h1>
             <p data-aos="fade-up" data-aos-delay="300">
-                Diseñamos páginas web profesionales que convierten visitantes en clientes reales.
+                Diseñamos páginas web profesionales que convierten visitantes en clientes reales. Garantizado.
             </p>
-
+            
             <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="400">
                 <a href="#contact" class="cta-button">
                     🚀 Empezar Ahora - Consulta Gratis
                 </a>
-                <a href="#portfolio" class="cta-button cta-secondary">
-                    👁️ Ver Trabajos
+                <a href="#guia-gratis" class="cta-button cta-secondary">
+                    📥 Descargar Guía Gratis
                 </a>
             </div>
 
@@ -1439,8 +1431,8 @@
 
             <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
                 <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Clientes Satisfechos</span>
+                    <span class="stat-number">52+</span>
+                    <span class="stat-label">Clientes Felices</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">98%</span>
@@ -1455,506 +1447,729 @@
     </section>
 
     <main id="main-content">
-        <section class="comparison" id="comparacion">
+        <!-- COMPARACIÓN -->
+        <section class="comparison">
             <div class="container">
-                <h2 data-aos="fade-up">¿Por Qué Tu Comercio Necesita una Web?</h2>
+                <h2 data-aos="fade-up">Tu Negocio: Con Web vs Sin Web</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    La diferencia entre tener presencia digital o quedarte atrás
+                    La diferencia es real y medible
                 </p>
+                
                 <div class="comparison-grid">
-                    <div class="comparison-card without" data-aos="fade-right" data-aos-delay="200">
-                        <div class="comparison-icon">❌</div>
+                    <div class="comparison-card without" data-aos="fade-right">
+                        <div class="comparison-icon">😰</div>
                         <h3>Sin Página Web</h3>
                         <ul class="comparison-list">
                             <li>Clientes no te encuentran en Google</li>
-                            <li>Pierdes ventas 24/7</li>
-                            <li>Competencia te supera</li>
-                            <li>Sin credibilidad profesional</li>
-                            <li>Dependes de redes sociales</li>
-                            <li>No puedes automatizar</li>
+                            <li>Perdés ventas las 24 horas</li>
+                            <li>Competencia te saca ventaja</li>
+                            <li>Imagen poco profesional</li>
+                            <li>Consultas solo en horario comercial</li>
+                            <li>Difícil mostrar todos tus productos</li>
+                            <li>Sin datos de tus clientes potenciales</li>
                         </ul>
                     </div>
-                    <div class="comparison-card with" data-aos="fade-left" data-aos-delay="300">
-                        <div class="comparison-icon">✅</div>
-                        <h3>Con Tu Web Profesional</h3>
+                    
+                    <div class="comparison-card with" data-aos="fade-left">
+                        <div class="comparison-icon">🚀</div>
+                        <h3>Con Tu Página Web</h3>
                         <ul class="comparison-list">
-                            <li>Apareces en Google Maps y búsquedas</li>
-                            <li>Ventas automáticas las 24 horas</li>
-                            <li>Te diferencias de la competencia</li>
+                            <li>Visible en Google 24/7</li>
+                            <li>Vendés mientras dormís</li>
+                            <li>Te posicionás como líder</li>
                             <li>Imagen profesional y confiable</li>
-                            <li>Control total de tu presencia</li>
-                            <li>Automatización de consultas</li>
+                            <li>Consultas automáticas por WhatsApp</li>
+                            <li>Catálogo completo siempre actualizado</li>
+                            <li>Base de datos de clientes potenciales</li>
+                            <li>Estadísticas reales de visitas</li>
+                            <li>Aumentá ventas entre 40-60%</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROCESO -->
         <section class="process" id="proceso">
             <div class="container">
-                <h2 data-aos="fade-up">Nuestro Proceso Simple en 5 Pasos</h2>
+                <h2 data-aos="fade-up">Nuestro Proceso Simple y Transparente</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    De la idea a tu web funcionando en tiempo récord
+                    De la idea al lanzamiento en 4 pasos claros
                 </p>
+                
                 <div class="process-timeline">
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step" data-aos="fade-right">
                         <div class="process-number">1</div>
                         <div class="process-content">
-                            <h3>Consulta Inicial</h3>
-                            <p class="process-duration">⏱️ 30-60 minutos</p>
-                            <p>Conocemos tu negocio, objetivos y necesidades. Definimos el mejor plan para vos.</p>
+                            <h3>Reunión y Análisis</h3>
+                            <p class="process-duration">⏱️ 30-45 minutos | GRATIS</p>
+                            <p>Nos conocemos, entendemos tu negocio, objetivos y competencia. Analizamos qué necesitás realmente para vender más.</p>
                         </div>
                     </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    
+                    <div class="process-step" data-aos="fade-left">
                         <div class="process-number">2</div>
                         <div class="process-content">
-                            <h3>Diseño Personalizado</h3>
-                            <p class="process-duration">⏱️ 3-5 días</p>
-                            <p>Creamos el diseño de tu web adaptado a tu marca. Revisamos juntos hasta que quede perfecto.</p>
+                            <h3>Propuesta Personalizada</h3>
+                            <p class="process-duration">⏱️ 48 horas</p>
+                            <p>Te enviamos propuesta detallada con diseño preliminar, funcionalidades, precio final y cronograma. Sin sorpresas.</p>
                         </div>
                     </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    
+                    <div class="process-step" data-aos="fade-right">
                         <div class="process-number">3</div>
                         <div class="process-content">
-                            <h3>Desarrollo y Contenido</h3>
-                            <p class="process-duration">⏱️ 5-7 días</p>
-                            <p>Programamos tu sitio y agregamos todo el contenido. 100% responsive y optimizado.</p>
+                            <h3>Diseño y Desarrollo</h3>
+                            <p class="process-duration">⏱️ 10-20 días hábiles</p>
+                            <p>Creamos tu web con revisiones ilimitadas hasta que quedes 100% conforme. Vas a ver avances en tiempo real.</p>
                         </div>
                     </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    
+                    <div class="process-step" data-aos="fade-left">
                         <div class="process-number">4</div>
                         <div class="process-content">
-                            <h3>Pruebas y Ajustes</h3>
-                            <p class="process-duration">⏱️ 2-3 días</p>
-                            <p>Testeamos todo: velocidad, seguridad, formularios. Hacemos los últimos ajustes.</p>
-                        </div>
-                    </div>
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="600">
-                        <div class="process-number">5</div>
-                        <div class="process-content">
-                            <h3>Lanzamiento y Soporte</h3>
-                            <p class="process-duration">⏱️ 1 día + soporte continuo</p>
-                            <p>¡Tu web va al aire! Te capacitamos y quedamos disponibles para cualquier consulta.</p>
+                            <h3>Lanzamiento + Capacitación</h3>
+                            <p class="process-duration">⏱️ 1-2 días</p>
+                            <p>Publicamos tu sitio, te enseñamos a usarlo y te damos soporte continuo. Tu negocio online ya está funcionando.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- FEATURES -->
         <section class="features">
             <div class="container">
-                <h2 data-aos="fade-up">Todo lo que Incluye Tu Página Web</h2>
+                <h2 data-aos="fade-up">¿Por qué Elegirnos?</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Soluciones completas sin costos ocultos
+                    Tecnología y experiencia al servicio de tu negocio
                 </p>
+                
                 <div class="features-grid">
-                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <article class="feature-card" data-aos="fade-up">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Presencia Online 24/7</h3>
+                        <p>El 87% de los clientes buscan en internet antes de comprar. Sé visible las 24 horas, todos los días del año.</p>
+                    </article>
+                    
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature-icon">📱</div>
                         <h3>100% Responsive</h3>
-                        <p>Se ve perfecto en celulares, tablets y computadoras. Adaptado a todos los dispositivos.</p>
-                    </div>
-                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Súper Rápida</h3>
-                        <p>Carga en menos de 2 segundos. Google premia la velocidad con mejor posicionamiento.</p>
-                    </div>
-                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="feature-icon">🔍</div>
-                        <h3>SEO Optimizado</h3>
-                        <p>Configuración completa para que aparezcas en las primeras posiciones de Google.</p>
-                    </div>
-                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="feature-icon">🔒</div>
-                        <h3>100% Segura</h3>
-                        <p>Certificado SSL incluido. Protección contra hackeos y malware.</p>
-                    </div>
-                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
+                        <p>Tu sitio se ve perfecto en celulares, tablets y computadoras. El 65% de tus clientes te busca desde el móvil.</p>
+                    </article>
+                    
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Velocidad Extrema</h3>
+                        <p>Páginas que cargan en menos de 2 segundos. Cada segundo de demora = 7% menos conversiones.</p>
+                    </article>
+                    
+                    <article class="feature-card" data-aos="fade-up">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Diseño Único</h3>
+                        <p>Cero plantillas genéricas. Cada proyecto refleja la identidad y valores únicos de tu marca.</p>
+                    </article>
+                    
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Panel de Control</h3>
+                        <p>Actualizá contenidos, precios y productos sin conocimientos técnicos. Autonomía total.</p>
+                    </article>
+                    
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-icon">💬</div>
-                        <h3>WhatsApp Integrado</h3>
-                        <p>Botón de contacto directo para que tus clientes te escriban al instante.</p>
-                    </div>
-                    <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="feature-icon">📊</div>
-                        <h3>Google Analytics</h3>
-                        <p>Medí tus visitas, de dónde vienen y qué hacen en tu sitio.</p>
-                    </div>
+                        <h3>Soporte Real</h3>
+                        <p>Respondemos en menos de 4 horas. Soporte técnico incluido durante y después del proyecto.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- PORTFOLIO -->
         <section class="portfolio" id="portfolio">
             <div class="container">
-                <h2 data-aos="fade-up">Proyectos que Transformaron Negocios</h2>
+                <h2 data-aos="fade-up">Casos de Éxito Reales</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Resultados comprobados de nuestros clientes
+                    Más de 50 negocios ya aumentaron sus ventas con nosotros
                 </p>
-
+                
                 <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="200">
                     <button class="filter-btn active" data-filter="all">Todos</button>
                     <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
                     <button class="filter-btn" data-filter="servicios">Servicios</button>
-                    <button class="filter-btn" data-filter="restaurante">Restaurantes</button>
+                    <button class="filter-btn" data-filter="restaurantes">Restaurantes</button>
                 </div>
-
+                
                 <div class="portfolio-grid">
-                    <div class="portfolio-item show" data-category="ecommerce" data-aos="fade-up">
-                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800');">
+                    <article class="portfolio-item" data-category="ecommerce" data-aos="fade-up">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop')">
                             <div class="portfolio-overlay">
-                                <span class="view-project">Ver Proyecto ➜</span>
+                                <span class="view-project">Ver Caso de Éxito →</span>
                             </div>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Tienda de Ropa Urbana</h3>
-                            <p>E-commerce completo con carrito y pagos online</p>
+                            <h3>Boutique "Estilo Urbano"</h3>
+                            <p>Tienda de ropa online con 300+ productos y gestión de stock automática</p>
                             <div class="portfolio-metrics">
-                                <span class="metric">📈 +150% ventas</span>
-                                <span class="metric">⭐ 4.9/5 rating</span>
+                                <span class="metric">📈 +60% Ventas</span>
+                                <span class="metric">🛒 +200 Pedidos/mes</span>
                             </div>
                             <div class="portfolio-tech">
                                 <span class="tech-badge">E-commerce</span>
-                                <span class="tech-badge">Responsive</span>
-                                <span class="tech-badge">Pagos Online</span>
+                                <span class="tech-badge">Mercado Pago</span>
+                                <span class="tech-badge">WhatsApp</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="portfolio-item show" data-category="servicios" data-aos="fade-up" data-aos-delay="100">
-                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800');">
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="restaurantes" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop')">
                             <div class="portfolio-overlay">
-                                <span class="view-project">Ver Proyecto ➜</span>
+                                <span class="view-project">Ver Caso de Éxito →</span>
                             </div>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Estudio Contable</h3>
-                            <p>Sitio profesional con sistema de turnos online</p>
+                            <h3>Restaurante "La Nonna"</h3>
+                            <p>Menú digital interactivo con sistema de reservas y pedidos por WhatsApp</p>
                             <div class="portfolio-metrics">
-                                <span class="metric">📞 +80 consultas/mes</span>
-                                <span class="metric">⏱️ 1 seg carga</span>
-                            </div>
-                            <div class="portfolio-tech">
-                                <span class="tech-badge">Landing Page</span>
-                                <span class="tech-badge">SEO</span>
-                                <span class="tech-badge">Formularios</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item show" data-category="restaurante" data-aos="fade-up" data-aos-delay="200">
-                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800');">
-                            <div class="portfolio-overlay">
-                                <span class="view-project">Ver Proyecto ➜</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Restaurante "El Buen Sabor"</h3>
-                            <p>Web con menú digital y reservas online</p>
-                            <div class="portfolio-metrics">
-                                <span class="metric">🍽️ +200 reservas/mes</span>
-                                <span class="metric">📱 Mobile-first</span>
+                                <span class="metric">📈 +45% Pedidos</span>
+                                <span class="metric">⭐ 4.9 Rating</span>
                             </div>
                             <div class="portfolio-tech">
                                 <span class="tech-badge">Menú Digital</span>
                                 <span class="tech-badge">Reservas</span>
-                                <span class="tech-badge">WhatsApp</span>
+                                <span class="tech-badge">SEO Local</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="servicios" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=500&fit=crop')">
+                            <div class="portfolio-overlay">
+                                <span class="view-project">Ver Caso de Éxito →</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Estudio "Contadores & Asoc."</h3>
+                            <p>Web corporativa con blog, calculadoras y sistema de turnos online</p>
+                            <div class="portfolio-metrics">
+                                <span class="metric">📈 +120 Consultas/mes</span>
+                                <span class="metric">🎯 #1 en Google</span>
+                            </div>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Blog</span>
+                                <span class="tech-badge">Turnos Online</span>
+                                <span class="tech-badge">Herramientas</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="ecommerce" data-aos="fade-up">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=500&fit=crop')">
+                            <div class="portfolio-overlay">
+                                <span class="view-project">Ver Caso de Éxito →</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Electrónica "TechMundo"</h3>
+                            <p>E-commerce con comparador de productos y pagos en cuotas</p>
+                            <div class="portfolio-metrics">
+                                <span class="metric">📈 +85% Conversión</span>
+                                <span class="metric">💰 $2M+ Ventas/mes</span>
+                            </div>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Cuotas</span>
+                                <span class="tech-badge">Comparador</span>
+                                <span class="tech-badge">Stock Real</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="servicios" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop')">
+                            <div class="portfolio-overlay">
+                                <span class="view-project">Ver Caso de Éxito →</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Inmobiliaria "Hogar+"</h3>
+                            <p>Portal con 500+ propiedades, filtros avanzados y tours virtuales</p>
+                            <div class="portfolio-metrics">
+                                <span class="metric">📈 +95 Consultas/sem</span>
+                                <span class="metric">🏠 15 Cierres/mes</span>
+                            </div>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Tour 360°</span>
+                                <span class="tech-badge">Filtros</span>
+                                <span class="tech-badge">Mapa</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="servicios" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=500&fit=crop')">
+                            <div class="portfolio-overlay">
+                                <span class="view-project">Ver Caso de Éxito →</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Gym "FitLife"</h3>
+                            <p>Web con clases online, rutinas personalizadas y pagos recurrentes</p>
+                            <div class="portfolio-metrics">
+                                <span class="metric">📈 +150 Socios</span>
+                                <span class="metric">💪 90% Retención</span>
+                            </div>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">Membresías</span>
+                                <span class="tech-badge">Streaming</span>
+                                <span class="tech-badge">App Mobile</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- TESTIMONIALS -->
         <section class="testimonials" id="testimonios">
             <div class="container">
-                <h2 data-aos="fade-up">Lo Que Dicen Nuestros Clientes</h2>
+                <h2 data-aos="fade-up">Lo que Dicen Nuestros Clientes</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Testimonios verificados de comercios reales
+                    +50 comercios ya confiaron en nosotros
                 </p>
+                
                 <div class="testimonials-grid">
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <article class="testimonial-card" data-aos="fade-up">
                         <div class="rating">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">
-                            "Desde que tenemos la web, las ventas aumentaron un 60%. Los clientes nos encuentran fácil en Google y el proceso de compra es súper simple."
+                            "Increíble trabajo! Mi tienda online superó todas mis expectativas. Las ventas aumentaron un 62% en el primer mes y ahora recibo pedidos incluso de madrugada. La inversión se pagó sola."
                         </p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">M</div>
+                            <div class="author-avatar">MC</div>
                             <div class="author-info">
-                                <strong>María Gómez</strong>
-                                <span>Dueña - Boutique "Estilo"</span>
+                                <strong>María Castro</strong>
+                                <span>Dueña de Boutique "Estilo Urbano"</span>
                                 <div class="verified-badge">✓ Cliente Verificado</div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    </article>
+                    
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="rating">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">
-                            "Muy profesionales. Me ayudaron en todo el proceso y ahora tengo una web que se ve increíble. Mis clientes siempre me felicitan por el diseño."
+                            "Profesionales de principio a fin. Me ayudaron con cada detalle, desde el logo hasta las fotos. El resultado es una página hermosa que mis clientes aman. Ahora parezco una empresa grande."
                         </p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">J</div>
+                            <div class="author-avatar">JR</div>
                             <div class="author-info">
-                                <strong>Jorge López</strong>
-                                <span>Contador - Estudio López & Asoc.</span>
+                                <strong>Jorge Rodríguez</strong>
+                                <span>Dueño de Restaurante "La Nonna"</span>
                                 <div class="verified-badge">✓ Cliente Verificado</div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    </article>
+                    
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="rating">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">
-                            "La mejor inversión para mi restaurante. Ahora recibo reservas por la web las 24 horas y no pierdo ni una llamada. Súper recomendables."
+                            "La mejor inversión para mi estudio. Ahora recibo 120+ consultas mensuales a través de la web. El sistema de turnos automatizado me ahorró una secretaria. ROI del 400%."
                         </p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">C</div>
+                            <div class="author-avatar">LP</div>
                             <div class="author-info">
-                                <strong>Carlos Pérez</strong>
-                                <span>Chef - Restaurante "El Buen Sabor"</span>
+                                <strong>Laura Pérez</strong>
+                                <span>Contadora - "Contadores & Asoc."</span>
                                 <div class="verified-badge">✓ Cliente Verificado</div>
                             </div>
                         </div>
-                    </div>
+                    </article>
+                    
+                    <article class="testimonial-card" data-aos="fade-up">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "No solo me hicieron la web, me enseñaron a vender por internet. El soporte post-lanzamiento fue excelente. Cada consulta respondida en minutos. Recomendadísimos."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">CR</div>
+                            <div class="author-info">
+                                <strong>Carlos Ruiz</strong>
+                                <span>Dueño de "TechMundo"</span>
+                                <div class="verified-badge">✓ Cliente Verificado</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Vendía 15 propiedades al año. Ahora vendo 15 por mes. La web con tours virtuales me posicionó como líder en la zona. Clientes me encuentran solos, sin publicidad."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AM</div>
+                            <div class="author-info">
+                                <strong>Andrea Morales</strong>
+                                <span>Inmobiliaria "Hogar+"</span>
+                                <div class="verified-badge">✓ Cliente Verificado</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">
+                            "Mi gimnasio estaba vacío. Ahora tengo lista de espera. La web con clases online me permitió llegar a todo el país. Increíble como cambió mi negocio."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DG</div>
+                            <div class="author-info">
+                                <strong>Diego Gómez</strong>
+                                <span>Dueño de Gym "FitLife"</span>
+                                <div class="verified-badge">✓ Cliente Verificado</div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="faq" id="faq">
+        <!-- FAQ -->
+        <section class="faq">
             <div class="container">
                 <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Resolvemos tus dudas más comunes
+                    Resolvemos todas tus dudas
                 </p>
+                
                 <div class="faq-grid">
+                    <div class="faq-item" data-aos="fade-up">
+                        <button class="faq-question">
+                            <span>¿Cuánto tiempo tarda en estar lista mi web?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            El tiempo depende del plan: Plan Básico 7-10 días, Plan Profesional 10-15 días, Plan E-commerce 15-25 días. Te mostramos avances cada 2-3 días para que veas el progreso.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                        <button class="faq-question">
+                            <span>¿Qué pasa si no me gusta el resultado?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Ofrecemos REVISIONES ILIMITADAS hasta que quedes 100% conforme. Si aún así no te convence, tenés 7 días para solicitar reembolso completo sin preguntas. Tu satisfacción es nuestra prioridad.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-question">
+                            <span>¿El hosting y dominio están incluidos?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Los planes Básico y Profesional incluyen hosting por 1 año (valor $30.000). El dominio (.com.ar o .com) también incluido. Para E-commerce, el hosting es de $15.000/mes por capacidad y seguridad superior.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                        <button class="faq-question">
+                            <span>¿Puedo actualizar contenido yo mismo?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            ¡SÍ! Incluimos un panel de administración súper intuitivo. Podés cambiar textos, precios, fotos y productos sin necesidad de programador. Te damos capacitación de 1 hora + videotutoriales.
+                        </div>
+                    </div>
+                    
                     <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                         <button class="faq-question">
-                            <span>¿Cuánto tiempo demora tener mi web lista?</span>
+                            <span>¿Ofrecen planes de pago?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            El tiempo promedio es de 10 a 15 días hábiles desde que empezamos. Depende de la complejidad y la rapidez con que nos proporciones el contenido (textos, fotos, etc.). Algunos proyectos simples pueden estar listos en una semana.
+                            ¡Sí! Aceptamos pago en hasta 3 cuotas sin interés con tarjeta de crédito. También Mercado Pago, transferencia bancaria o efectivo con 10% de descuento.
                         </div>
                     </div>
-
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                        <button class="faq-question">
-                            <span>¿Necesito conocimientos técnicos?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            Para nada. Nosotros nos encargamos de todo: diseño, programación, hosting y configuración. Solo necesitás tener claros tus objetivos y proporcionarnos el contenido de tu negocio. Te capacitamos para que puedas hacer cambios simples si querés.
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                        <button class="faq-question">
-                            <span>¿El precio incluye el dominio y hosting?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            Sí, en nuestros paquetes incluimos el dominio (.com.ar o .com) por un año y hosting en servidores de alta velocidad. Después del primer año, solo pagás la renovación anual que es muy económica (aprox. $5.000-$10.000/año).
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                        <button class="faq-question">
-                            <span>¿Puedo hacer cambios después del lanzamiento?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            ¡Por supuesto! Ofrecemos soporte post-lanzamiento. Los primeros 30 días hacemos ajustes gratis. Después podés contratar un plan de mantenimiento mensual o solicitar cambios puntuales con costo aparte según la complejidad.
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
                         <button class="faq-question">
                             <span>¿Mi web va a aparecer en Google?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            Sí. Hacemos la optimización SEO básica: meta tags, sitemap, registro en Google Search Console y Google My Business. Aparecer en los primeros resultados depende también del contenido, competencia y estrategia de marketing a largo plazo. Podemos ayudarte con SEO avanzado y publicidad si lo necesitás.
+                            Todos nuestros sitios incluyen optimización SEO básica (palabras clave, meta tags, velocidad). Para posicionamiento TOP necesitás SEO avanzado (servicio adicional). Te enseñamos estrategias gratuitas para empezar.
                         </div>
                     </div>
-
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                         <button class="faq-question">
-                            <span>¿Ofrecen garantía?</span>
+                            <span>¿Qué incluye el soporte post-lanzamiento?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            Sí, ofrecemos garantía de 30 días. Si no estás conforme con el resultado, revisamos y ajustamos hasta que quedes 100% satisfecho. Nuestro objetivo es que tengas una web que realmente funcione para tu negocio.
+                            Plan Básico: 15 días gratis. Plan Profesional: 1 mes gratis. Plan E-commerce: 3 meses gratis. Incluye: correcciones, actualizaciones de seguridad, respuesta en 4hs. Después podés contratar soporte mensual opcional.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                        <button class="faq-question">
+                            <span>¿Necesito tener el contenido listo?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            NO es necesario. Te ayudamos a crear los textos, tomamos fotos profesionales de tus productos (servicio adicional) y diseñamos el logo si no tenés. Nos encargamos de todo.
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PRICING -->
         <section class="pricing" id="precios">
             <div class="container">
-                <h2 data-aos="fade-up">Planes Accesibles para Tu Negocio</h2>
+                <h2 data-aos="fade-up">Planes que se Adaptan a tu Presupuesto</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Inversión única, beneficios permanentes
+                    Sin costos ocultos. Todo incluido.
                 </p>
+                
                 <div class="pricing-grid">
-                    <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
+                    <article class="pricing-card" data-aos="fade-up">
                         <div class="pricing-header">
-                            <h3>Landing Page</h3>
-                            <div class="price">$50.000</div>
-                            <p class="price-note">Pago único</p>
-                            <p class="payment-options">💳 Hasta 3 cuotas sin interés</p>
+                            <h3>Landing Express</h3>
+                            <p>Para empezar rápido</p>
                         </div>
+                        <div class="price">$50.000</div>
+                        <p class="price-note">Pago único</p>
+                        <p class="payment-options">✓ Hasta 3 cuotas sin interés</p>
                         <ul>
-                            <li>1 página optimizada</li>
+                            <li>Página única impactante</li>
                             <li>Diseño responsive</li>
                             <li>Formulario de contacto</li>
-                            <li>WhatsApp integrado</li>
-                            <li>SEO básico</li>
-                            <li>Hosting 1 año gratis</li>
-                            <li>Dominio .com.ar incluido</li>
-                        </ul>
-                        <button class="pricing-cta" onclick="window.location.href='#contact'">Comenzar Ahora</button>
-                        <span class="guarantee-badge">✓ Garantía 30 días</span>
-                    </div>
-
-                    <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="pricing-header">
-                            <h3>Web Profesional</h3>
-                            <div class="price">$120.000</div>
-                            <p class="price-note">Pago único</p>
-                            <p class="payment-options">💳 Hasta 6 cuotas sin interés</p>
-                        </div>
-                        <ul>
-                            <li>Hasta 5 páginas</li>
-                            <li>Diseño 100% personalizado</li>
-                            <li>Formularios avanzados</li>
+                            <li>Botón WhatsApp flotante</li>
+                            <li>Optimización SEO básica</li>
                             <li>Google Maps integrado</li>
-                            <li>SEO avanzado</li>
-                            <li>Google Analytics</li>
-                            <li>Blog incluido</li>
-                            <li>Hosting 1 año gratis</li>
-                            <li>Dominio .com incluido</li>
-                            <li>Capacitación incluida</li>
+                            <li>SSL/HTTPS incluido</li>
+                            <li>Hosting 1 año GRATIS</li>
+                            <li>15 días de soporte</li>
                         </ul>
-                        <button class="pricing-cta" onclick="window.location.href='#contact'">¡Quiero Este!</button>
-                        <span class="guarantee-badge">✓ Garantía 30 días</span>
-                    </div>
-
-                    <div class="pricing-card" data-aos="zoom-in" data-aos-delay="400">
+                        <button class="pricing-cta">Elegir Plan Express</button>
+                        <span class="guarantee-badge">🛡️ Garantía 7 días</span>
+                    </article>
+                    
+                    <article class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-header">
+                            <h3>Básico</h3>
+                            <p>Presencia profesional</p>
+                        </div>
+                        <div class="price">$80.000</div>
+                        <p class="price-note">Pago único</p>
+                        <p class="payment-options">✓ Hasta 3 cuotas sin interés</p>
+                        <ul>
+                            <li>Hasta 3 páginas completas</li>
+                            <li>Sección "Sobre Nosotros"</li>
+                            <li>Formulario de contacto avanzado</li>
+                            <li>Diseño responsive premium</li>
+                            <li>Optimización SEO básica</li>
+                            <li>Integración Google Maps + Reseñas</li>
+                            <li>Botón WhatsApp flotante</li>
+                            <li>SSL/HTTPS incluido</li>
+                            <li>Hosting 1 año GRATIS</li>
+                            <li>20 días de soporte gratis</li>
+                        </ul>
+                        <button class="pricing-cta">Elegir Plan Básico</button>
+                        <span class="guarantee-badge">🛡️ Garantía 7 días</span>
+                    </article>
+                    
+                    <article class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-header">
+                            <h3>Profesional</h3>
+                            <p>Todo lo que necesitás</p>
+                        </div>
+                        <div class="price">$150.000</div>
+                        <p class="price-note">Pago único</p>
+                        <p class="payment-options">✓ Hasta 3 cuotas sin interés</p>
+                        <ul>
+                            <li>Hasta 7 páginas completas</li>
+                            <li>Galería productos/servicios</li>
+                            <li>Blog o sección noticias</li>
+                            <li>Integración redes sociales</li>
+                            <li>WhatsApp Business API</li>
+                            <li>Sistema de reservas/turnos</li>
+                            <li>Google Analytics + Search Console</li>
+                            <li>Optimización SEO avanzada</li>
+                            <li>Panel de administración completo</li>
+                            <li>Email corporativo (@tunegocio.com)</li>
+                            <li>Hosting 1 año GRATIS</li>
+                            <li>1 mes soporte gratis</li>
+                            <li>Capacitación 1:1</li>
+                        </ul>
+                        <button class="pricing-cta">Elegir Plan Profesional</button>
+                        <span class="guarantee-badge">🛡️ Garantía 7 días</span>
+                    </article>
+                    
+                    <article class="pricing-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="pricing-header">
                             <h3>E-commerce</h3>
-                            <div class="price">$250.000</div>
-                            <p class="price-note">Pago único</p>
-                            <p class="payment-options">💳 Financiación disponible</p>
+                            <p>Vendé online YA</p>
                         </div>
+                        <div class="price">$250.000</div>
+                        <p class="price-note">+ $15.000/mes hosting</p>
+                        <p class="payment-options">✓ Hasta 3 cuotas sin interés</p>
                         <ul>
-                            <li>Tienda online completa</li>
-                            <li>Hasta 100 productos</li>
-                            <li>Carrito de compras</li>
-                            <li>Pasarela de pagos</li>
-                            <li>Panel de administración</li>
-                            <li>Sistema de envíos</li>
-                            <li>Email marketing básico</li>
-                            <li>SEO e-commerce</li>
-                            <li>Hosting 1 año gratis</li>
-                            <li>Soporte prioritario</li>
+                            <li>Todo del plan Profesional</li>
+                            <li>Catálogo ILIMITADO de productos</li>
+                            <li>Carrito de compras avanzado</li>
+                            <li>Mercado Pago + Transferencia + Efectivo</li>
+                            <li>Panel administración e-commerce</li>
+                            <li>Gestión stock automática</li>
+                            <li>Sistema de envíos (Correo, Andreani)</li>
+                            <li>Cupones y descuentos</li>
+                            <li>Facturación automática</li>
+                            <li>Notificaciones email/WhatsApp</li>
+                            <li>Analytics de ventas</li>
+                            <li>3 meses soporte gratis</li>
+                            <li>Capacitación 2hs + Videos</li>
                         </ul>
-                        <button class="pricing-cta" onclick="window.location.href='#contact'">Consultar</button>
-                        <span class="guarantee-badge">✓ Garantía 30 días</span>
-                    </div>
+                        <button class="pricing-cta">Elegir Plan E-commerce</button>
+                        <span class="guarantee-badge">🛡️ Garantía 7 días</span>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- LEAD MAGNET -->
+        <section class="lead-magnet" id="guia-gratis">
+            <div class="container">
+                <h2 data-aos="fade-up">Descargá GRATIS: "10 Errores que Cometen los Comercios Sin Web"</h2>
+                <div class="lead-content" data-aos="fade-up" data-aos-delay="100">
+                    <p style="font-size: 1.2em; margin-bottom: 25px;">
+                        Guía PDF exclusiva con estrategias probadas para aumentar tus ventas online
+                    </p>
+                    
+                    <ul class="lead-benefits">
+                        <li>Cómo aparecer en la primera página de Google sin pagar publicidad</li>
+                        <li>10 técnicas para convertir visitantes en clientes (ROI +300%)</li>
+                        <li>Checklist: ¿Tu negocio está listo para el mundo digital?</li>
+                        <li>Caso de estudio: Comercio que aumentó ventas 400% en 90 días</li>
+                        <li>Bonus: Template de plan de marketing digital</li>
+                    </ul>
+                    
+                    <form class="lead-form" id="leadForm">
+                        <input 
+                            type="email" 
+                            class="lead-input" 
+                            placeholder="Tu mejor email"
+                            required
+                            name="email_lead"
+                        >
+                        <button type="submit" class="lead-btn">
+                            Descargar Ahora
+                        </button>
+                    </form>
+                    <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.9;">
+                        📧 Envío inmediato. Sin spam. Cancelá cuando quieras.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
         <section class="contact" id="contact">
             <div class="container">
-                <h2 data-aos="fade-up">Comenzá Tu Proyecto Hoy</h2>
+                <h2 data-aos="fade-up">¡Empezá tu Proyecto Hoy!</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Respondemos en menos de 24 horas
+                    Dejanos tus datos y te contactamos en menos de 24hs con una propuesta personalizada
                 </p>
+                
                 <div class="contact-wrapper">
-                    <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
-                        <h3>Formas de Contacto</h3>
-
-                        <a href="https://wa.me/5491173640915" class="contact-method" style="text-decoration: none; color: inherit;">
-                            <div class="contact-icon">💬</div>
+                    <div class="contact-info" data-aos="fade-right">
+                        <h3>Hablemos de tu proyecto</h3>
+                        <p style="color: var(--gray-700); font-size: 1.1em; margin-bottom: 30px;">
+                            Respondemos todas tus consultas de forma rápida y sin compromiso. Elegí tu canal favorito:
+                        </p>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
                             <div>
-                                <strong>WhatsApp</strong><br>
-                                +54 9 11 7364-0915
+                                <strong style="display: block; margin-bottom: 5px;">WhatsApp</strong>
+                                <span>+54 9 11 7364-0915</span><br>
+                                <small>Respuesta en minutos</small>
                             </div>
-                        </a>
-
-                        <a href="mailto:contacto@tudominio.com" class="contact-method" style="text-decoration: none; color: inherit;">
+                        </div>
+                        
+                        <div class="contact-method">
                             <div class="contact-icon">📧</div>
                             <div>
-                                <strong>Email</strong><br>
-                                contacto@tudominio.com
+                                <strong style="display: block; margin-bottom: 5px;">Email</strong>
+                                <span>info@disenowebpro.com</span><br>
+                                <small>Respuesta en 4hs hábiles</small>
                             </div>
-                        </a>
-
+                        </div>
+                        
                         <div class="contact-method">
                             <div class="contact-icon">📍</div>
                             <div>
-                                <strong>Ubicación</strong><br>
-                                Lanús, Buenos Aires, Argentina
+                                <strong style="display: block; margin-bottom: 5px;">Ubicación</strong>
+                                <span>Lanús, Buenos Aires</span><br>
+                                <small>Atendemos presencial y online</small>
                             </div>
                         </div>
-
+                        
                         <div class="contact-method">
-                            <div class="contact-icon">⏰</div>
+                            <div class="contact-icon">🕐</div>
                             <div>
-                                <strong>Horario</strong><br>
-                                Lun a Vie: 9:00 - 18:00<br>
-                                Sáb: 9:00 - 13:00
+                                <strong style="display: block; margin-bottom: 5px;">Horarios</strong>
+                                <span>Lun-Vie: 9am - 8pm</span><br>
+                                <span>Sáb: 10am - 2pm</span>
                             </div>
                         </div>
                     </div>
-
-                    <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="300">
-                        <div class="form-success" id="formSuccess">
-                            ✓ ¡Mensaje enviado! Te contactaremos pronto.
-                        </div>
-
+                    
+                    <form class="contact-form" id="contactForm" data-aos="fade-left">
                         <div class="form-group">
-                            <label for="name">Nombre Completo *</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message">Por favor ingresá tu nombre</span>
+                            <label for="nombre">Tu Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required minlength="2">
+                            <span class="error-message" id="nombreError"></span>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email">Tu Email *</label>
                             <input type="email" id="email" name="email" required>
-                            <span class="error-message">Por favor ingresá un email válido</span>
+                            <span class="error-message" id="emailError"></span>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="phone">Teléfono/WhatsApp *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                            <span class="error-message">Por favor ingresá tu teléfono</span>
+                            <label for="telefono">Tu Teléfono/WhatsApp *</label>
+                            <input type="tel" id="telefono" name="telefono" required pattern="[0-9\s\-\+\(\)]{8,}">
+                            <span class="error-message" id="telefonoError"></span>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="service">¿Qué necesitás? *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Seleccioná una opción</option>
-                                <option value="landing">Landing Page</option>
-                                <option value="web">Web Profesional</option>
-                                <option value="ecommerce">E-commerce</option>
-                                <option value="otro">Otro / No estoy seguro</option>
+                            <label for="plan">¿Qué plan te interesa? *</label>
+                            <select id="plan" name="plan" required>
+                                <option value="">Seleccioná un plan</option>
+                                <option value="express">Landing Express - $50.000</option>
+                                <option value="basico">Plan Básico - $80.000</option>
+                                <option value="profesional">Plan Profesional - $150.000 (MÁS POPULAR)</option>
+                                <option value="ecommerce">Plan E-commerce - $250.000</option>
+                                <option value="consulta">No estoy seguro, necesito asesoramiento</option>
                             </select>
-                            <span class="error-message">Por favor seleccioná un servicio</span>
+                            <span class="error-message" id="planError"></span>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="message">Contanos sobre tu proyecto</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="mensaje">Contanos sobre tu negocio *</label>
+                            <textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Ej: Tengo una tienda de ropa y necesito vender por internet. Me gustaría mostrar 100 productos y recibir pagos online..."></textarea>
+                            <span class="error-message" id="mensajeError"></span>
                         </div>
-
-                        <button type="submit" class="submit-btn" id="submitBtn">
-                            Enviar Consulta
+                        
+                        <button type="submit" class="submit-btn">
+                            🚀 Solicitar Consulta GRATIS
                         </button>
-
+                        
                         <p class="privacy-notice">
-                            Al enviar este formulario aceptás nuestra política de privacidad. 
-                            No compartimos tu información con terceros.
+                            🔒 Tus datos están protegidos. No compartimos tu información con terceros.
+                            Al enviar aceptás nuestra política de privacidad.
                         </p>
                     </form>
                 </div>
@@ -1962,63 +2177,76 @@
         </section>
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>WebPro</h4>
-                <p>Diseño web profesional para comercios que quieren crecer en el mundo digital.</p>
+                <h4>Diseño Web Pro</h4>
+                <p style="color: var(--gray-300); margin-bottom: 20px;">
+                    Transformamos negocios locales en líderes digitales. Más de 50 empresas ya confían en nosotros.
+                </p>
                 <div class="social-links">
-                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
                     <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
                     <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
                 </div>
             </div>
-
+            
             <div class="footer-section">
                 <h4>Servicios</h4>
                 <ul class="footer-links">
-                    <li><a href="#precios">Landing Pages</a></li>
                     <li><a href="#precios">Diseño Web</a></li>
                     <li><a href="#precios">E-commerce</a></li>
-                    <li><a href="#precios">SEO</a></li>
+                    <li><a href="#precios">Landing Pages</a></li>
+                    <li><a href="#">SEO y Marketing</a></li>
+                    <li><a href="#">Mantenimiento Web</a></li>
+                    <li><a href="#">Hosting y Dominios</a></li>
                 </ul>
             </div>
-
+            
             <div class="footer-section">
                 <h4>Empresa</h4>
                 <ul class="footer-links">
+                    <li><a href="#proceso">Cómo Trabajamos</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#proceso">Proceso</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Casos de Éxito</a></li>
                 </ul>
             </div>
-
+            
             <div class="footer-section">
-                <h4>Contacto</h4>
+                <h4>Legal</h4>
                 <ul class="footer-links">
-                    <li>📧 contacto@tudominio.com</li>
-                    <li>📞 +54 9 11 7364-0915</li>
-                    <li>📍 Lanús, Buenos Aires</li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Política de Reembolso</a></li>
                 </ul>
             </div>
         </div>
-
+        
         <div class="footer-bottom">
-            <p>&copy; 2024 WebPro. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Diseño Web Pro. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px;">Lanús, Buenos Aires, Argentina | Diseño y desarrollo con ❤️</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5491173640915?text=Hola!%20Quiero%20consultar%20por%20una%20página%20web" 
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5491173640915?text=Hola%2C%20quiero%20más%20información%20sobre%20diseño%20web" 
        class="whatsapp-float" 
        target="_blank" 
+       rel="noopener noreferrer"
        aria-label="Contactar por WhatsApp">
         💬
     </a>
 
+    <!-- COOKIE BANNER -->
     <div class="cookie-banner" id="cookieBanner">
         <div class="cookie-text">
-            🍪 Usamos cookies para mejorar tu experiencia. Al continuar navegando, aceptás su uso.
+            <strong>🍪 Usamos cookies</strong><br>
+            Este sitio usa cookies para mejorar tu experiencia. Al continuar navegando aceptás su uso.
         </div>
         <div class="cookie-buttons">
             <button class="cookie-btn cookie-accept" id="acceptCookies">Aceptar</button>
@@ -2026,205 +2254,353 @@
         </div>
     </div>
 
+    <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 800,
             once: true,
-            offset: 100
+            offset: 50
         });
 
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-
-        function startCountdown() {
+        // COUNTDOWN TIMER (Urgencia - 7 días)
+        function updateCountdown() {
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7);
+            
             const now = new Date().getTime();
-            const endDate = now + (7 * 24 * 60 * 60 * 1000);
-
-            if (!localStorage.getItem('countdownEnd')) {
-                localStorage.setItem('countdownEnd', endDate);
-            }
-
-            const countdownEnd = parseInt(localStorage.getItem('countdownEnd'));
-
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = countdownEnd - now;
-
-                if (distance < 0) {
-                    clearInterval(timer);
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            }, 1000);
+            const distance = endDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
         }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
 
-        startCountdown();
+        // COOKIE BANNER
+        const cookieBanner = document.getElementById('cookieBanner');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const declineCookies = document.getElementById('declineCookies');
+        
+        if (!sessionStorage.getItem('cookieConsent')) {
+            setTimeout(() => cookieBanner.classList.add('show'), 2000);
+        }
+        
+        acceptCookies.addEventListener('click', () => {
+            sessionStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.classList.remove('show');
+        });
+        
+        declineCookies.addEventListener('click', () => {
+            sessionStorage.setItem('cookieConsent', 'declined');
+            cookieBanner.classList.remove('show');
+        });
 
+        // FAQ ACCORDION
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
                 const isActive = faqItem.classList.contains('active');
-
+                
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                 });
-
+                
                 if (!isActive) {
                     faqItem.classList.add('active');
                 }
             });
         });
 
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                document.querySelectorAll('.portfolio-item').forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.classList.add('show');
+        // PORTFOLIO FILTER
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
                     } else {
-                        item.classList.remove('show');
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
                     }
                 });
             });
         });
 
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const formSuccess = document.getElementById('formSuccess');
-
-        contactForm.addEventListener('submit', async (e) => {
+        // FORM VALIDATION - LEAD MAGNET
+        const leadForm = document.getElementById('leadForm');
+        
+        leadForm.addEventListener('submit', async function(e) {
             e.preventDefault();
+            
+            const btn = leadForm.querySelector('.lead-btn');
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Enviando...';
+            
+            // Simular envío (reemplazar con tu backend real)
+            setTimeout(() => {
+                alert('¡Perfecto! Revisá tu email. Te enviamos la guía + un bonus exclusivo 🎁');
+                leadForm.reset();
+                btn.disabled = false;
+                btn.textContent = originalText;
+                
+                // Redirigir a descarga o abrir popup
+                // window.open('/descarga-guia-gratis.pdf', '_blank');
+            }, 1500);
+        });
 
+        // FORM VALIDATION - CONTACT
+        const contactForm = document.getElementById('contactForm');
+        const inputs = {
+            nombre: document.getElementById('nombre'),
+            email: document.getElementById('email'),
+            telefono: document.getElementById('telefono'),
+            plan: document.getElementById('plan'),
+            mensaje: document.getElementById('mensaje')
+        };
+
+        // Validación en tiempo real
+        Object.keys(inputs).forEach(key => {
+            inputs[key].addEventListener('blur', () => validateField(key));
+            inputs[key].addEventListener('input', () => {
+                if (inputs[key].classList.contains('error')) {
+                    validateField(key);
+                }
+            });
+        });
+
+        function validateField(fieldName) {
+            const field = inputs[fieldName];
+            const errorMsg = document.getElementById(fieldName + 'Error');
             let isValid = true;
-            const inputs = contactForm.querySelectorAll('input[required], select[required]');
+            let errorText = '';
 
-            inputs.forEach(input => {
-                const errorMsg = input.parentElement.querySelector('.error-message');
+            field.classList.remove('error');
+            if (errorMsg) errorMsg.classList.remove('show');
 
-                if (!input.value.trim()) {
-                    input.classList.add('error');
+            if (fieldName === 'nombre' && field.value.trim().length < 2) {
+                isValid = false;
+                errorText = 'Por favor ingresá tu nombre completo (mín. 2 caracteres)';
+            } else if (fieldName === 'email' && !isValidEmail(field.value)) {
+                isValid = false;
+                errorText = 'Por favor ingresá un email válido (ej: tu@email.com)';
+            } else if (fieldName === 'telefono' && !isValidPhone(field.value)) {
+                isValid = false;
+                errorText = 'Por favor ingresá un teléfono válido (ej: 11 7364-0915)';
+            } else if (fieldName === 'plan' && !field.value) {
+                isValid = false;
+                errorText = 'Por favor seleccioná un plan o elegí "No estoy seguro"';
+            } else if (fieldName === 'mensaje' && field.value.trim().length < 10) {
+                isValid = false;
+                errorText = 'Por favor contanos un poco más sobre tu proyecto (mín. 10 caracteres)';
+            }
+
+            if (!isValid) {
+                field.classList.add('error');
+                if (errorMsg) {
+                    errorMsg.textContent = errorText;
                     errorMsg.classList.add('show');
-                    isValid = false;
-                } else {
-                    input.classList.remove('error');
-                    errorMsg.classList.remove('show');
+                }
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
+        }
+
+        function isValidPhone(phone) {
+            const cleaned = phone.replace(/[\s\-\+\(\)]/g, '');
+            return cleaned.length >= 8 && /^\d+$/.test(cleaned);
+        }
+
+        // Prevenir spam
+        let lastSubmit = 0;
+        
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const now = Date.now();
+            if (now - lastSubmit < 5000) {
+                alert('Por favor esperá unos segundos antes de enviar nuevamente.');
+                return false;
+            }
+            
+            // Validar todos los campos
+            let allValid = true;
+            Object.keys(inputs).forEach(key => {
+                if (!validateField(key)) {
+                    allValid = false;
                 }
             });
 
-            const emailInput = document.getElementById('email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (emailInput.value && !emailRegex.test(emailInput.value)) {
-                emailInput.classList.add('error');
-                emailInput.parentElement.querySelector('.error-message').classList.add('show');
-                isValid = false;
+            if (!allValid) {
+                alert('Por favor completá todos los campos correctamente.');
+                return;
             }
 
-            if (!isValid) return;
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner"></span> Enviando...';
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: emailInput.value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-
+            lastSubmit = now;
+            const btn = contactForm.querySelector('.submit-btn');
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span> Enviando...';
+            
+            // IMPORTANTE: Reemplazar con tu endpoint real
+            // Ejemplo con Formspree:
+            const formData = new FormData(contactForm);
+            
             try {
-                await new Promise(resolve => setTimeout(resolve, 1500));
-                formSuccess.classList.add('show');
-                contactForm.reset();
-
-                setTimeout(() => {
-                    formSuccess.classList.remove('show');
-                }, 5000);
-
+                // Reemplazar 'YOUR_FORM_ID' con tu ID de Formspree o tu backend
+                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('¡Genial! Recibimos tu consulta. Te contactamos en menos de 24hs por WhatsApp o email. ¡Gracias! 🚀');
+                    contactForm.reset();
+                    
+                    // Opcional: Redirigir a página de gracias
+                    // window.location.href = '/gracias.html';
+                } else {
+                    throw new Error('Error en el envío');
+                }
             } catch (error) {
-                console.error('Error:', error);
-                alert('Hubo un error al enviar el formulario. Por favor, intentá de nuevo o contactanos por WhatsApp.');
+                alert('Hubo un error al enviar. Por favor intentá nuevamente o contactanos por WhatsApp: +54 9 11 7364-0915');
             } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Enviar Consulta';
+                btn.disabled = false;
+                btn.textContent = originalText;
             }
         });
 
-        const cookieBanner = document.getElementById('cookieBanner');
-        const acceptCookies = document.getElementById('acceptCookies');
-        const declineCookies = document.getElementById('declineCookies');
-
-        if (!localStorage.getItem('cookieConsent')) {
-            setTimeout(() => {
-                cookieBanner.classList.add('show');
-            }, 2000);
-        }
-
-        acceptCookies.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'accepted');
-            cookieBanner.classList.remove('show');
-        });
-
-        declineCookies.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'declined');
-            cookieBanner.classList.remove('show');
-        });
-
+        // SMOOTH SCROLL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-
                 e.preventDefault();
-                const target = document.querySelector(href);
+                const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
+        // HEADER SCROLL EFFECT
         let lastScroll = 0;
         const header = document.querySelector('.header');
-
+        
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 0) {
-                header.style.boxShadow = 'none';
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
             } else {
-                header.style.boxShadow = 'var(--shadow)';
+                header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
             }
-
+            
             lastScroll = currentScroll;
         });
+
+        // ANALYTICS TRACKING (Google Analytics 4)
+        // Descomentar y reemplazar con tu ID de GA4
+        /*
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        
+        // Track CTA clicks
+        document.querySelectorAll('.cta-button, .pricing-cta, .nav-cta').forEach(btn => {
+            btn.addEventListener('click', function() {
+                gtag('event', 'cta_click', {
+                    'event_category': 'engagement',
+                    'event_label': this.textContent
+                });
+            });
+        });
+        
+        // Track form submissions
+        contactForm.addEventListener('submit', function() {
+            gtag('event', 'form_submit', {
+                'event_category': 'conversion',
+                'event_label': 'contact_form'
+            });
+        });
+        */
+
+        // PERFORMANCE MONITORING
+        window.addEventListener('load', () => {
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - 
+                           window.performance.timing.navigationStart;
+            console.log(`Page loaded in ${loadTime}ms`);
+            
+            // Enviar a analytics si está configurado
+            // gtag('event', 'timing_complete', {
+            //     'name': 'load',
+            //     'value': loadTime
+            // });
+        });
+
+        // LAZY LOADING IMAGES (si agregás imágenes reales)
+        /*
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img.lazy').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+        */
+
+        // WHATSAPP FLOATING BUTTON PULSE
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        setInterval(() => {
+            whatsappBtn.style.animation = 'none';
+            setTimeout(() => {
+                whatsappBtn.style.animation = 'bounce 2s infinite';
+            }, 10);
+        }, 10000);
+
+        // CONSOLE MESSAGE (Branding)
+        console.log('%c¡Hola Developer! 👋', 'font-size: 20px; font-weight: bold; color: #667eea;');
+        console.log('%c¿Te gustó este sitio? Nosotros lo hicimos. Contactanos para tu proyecto.', 'font-size: 14px; color: #666;');
+        console.log('%cWhatsApp: +54 9 11 7364-0915', 'font-size: 12px; color: #25d366; font-weight: bold;');
     </script>
 </body>
 </html>
