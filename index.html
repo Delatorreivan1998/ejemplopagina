@@ -4,47 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Básico -->
-    <title>Serpira Studio | Diseño Web para Negocios que Quieren Vender</title>
-    <meta name="description" content="Diseñamos sitios web estratégicos para negocios de servicios en Argentina. Convertimos tu web en un activo que vende, no en una tarjeta de presentación. +50 clientes satisfechos.">
-    <meta name="keywords" content="diseño web argentina, páginas web profesionales, desarrollo web buenos aires, sitios web que convierten, diseño web para servicios">
-    <meta name="author" content="Serpira Studio">
-    <meta name="theme-color" content="#0f172a">
+    <!-- SEO -->
+    <title>Serpira Studio | No Hacemos Páginas Web. Creamos Sistemas de Ventas Online.</title>
+    <meta name="description" content="Diseño web estratégico para empresas de servicios en Argentina. Sitios que convierten visitantes en clientes. Entrega en 21 días. Garantía de resultados.">
+    <meta name="keywords" content="diseño web argentina, páginas web profesionales, sitios que convierten, desarrollo web estratégico">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Serpira Studio | Web Design & Performance">
-    <meta property="og:description" content="Convertimos tu sitio en un activo que vende, no en una tarjeta de presentación">
+    <meta property="og:title" content="Serpira Studio | Sitios Web que Convierten">
+    <meta property="og:description" content="No hacemos páginas web. Creamos sistemas de ventas online para empresas de servicios.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tu-dominio.vercel.app">
     <meta property="og:image" content="https://tu-dominio.vercel.app/og-image.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23f97316'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%230f172a' font-family='Arial,sans-serif' font-weight='700'>S</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23000'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='%23fff' font-family='Arial' font-weight='700'>S</text></svg>">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Schema.org para SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Serpira Studio",
-      "description": "Estudio de diseño web estratégico para negocios de servicios",
-      "url": "https://tu-dominio.vercel.app",
-      "telephone": "+54-9-11-7364-0915",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "AR"
-      },
-      "sameAs": [
-        "https://instagram.com/serpirastudio",
-        "https://linkedin.com/company/serpirastudio"
-      ]
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -54,206 +31,182 @@
         }
 
         :root {
-            --primary: #f97316;
-            --primary-dark: #ea580c;
-            --secondary: #a855f7;
-            --bg-dark: #05030f;
-            --bg-secondary: #0f172a;
-            --bg-card: #1e293b;
-            --text-primary: #f9fafb;
-            --text-secondary: #e5e7eb;
-            --text-muted: #9ca3af;
-            --border: rgba(148, 163, 184, 0.2);
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-300: #d4d4d4;
+            --gray-400: #a3a3a3;
+            --gray-500: #737373;
+            --gray-600: #525252;
+            --gray-700: #404040;
+            --gray-800: #262626;
+            --gray-900: #171717;
+            --accent: #000000;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--black);
             line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-dark);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER / NAV */
+        /* HEADER */
         .header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(5, 3, 15, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
             z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
             padding: 16px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-
-        .logo-mark {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
             font-size: 20px;
-            color: var(--bg-dark);
+            font-weight: 800;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: -0.02em;
         }
 
-        .logo-text {
+        .nav-menu {
             display: flex;
-            flex-direction: column;
-        }
-
-        .logo-name {
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.03em;
-        }
-
-        .logo-tagline {
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
+            gap: 40px;
             list-style: none;
         }
 
-        .nav-links a {
-            color: var(--text-secondary);
+        .nav-menu a {
+            color: var(--gray-600);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 500;
             transition: color 0.2s;
-            position: relative;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.2s;
+        .nav-menu a:hover {
+            color: var(--black);
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--black);
+            color: var(--white);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            transition: all 0.3s;
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         /* HERO */
         .hero {
-            margin-top: 70px;
-            padding: 80px 20px 100px;
-            background: radial-gradient(circle at 20% 10%, rgba(249, 115, 22, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 50%),
-                        var(--bg-dark);
-            position: relative;
+            margin-top: 80px;
+            padding: 120px 40px 80px;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border), transparent);
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 60px;
+        .hero-badge {
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: var(--gray-100);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.6s ease;
         }
 
-        .hero-eyebrow {
-            display: inline-block;
-            font-size: 12px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--primary);
-            margin-bottom: 16px;
-            font-weight: 600;
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         .hero h1 {
-            font-size: clamp(36px, 5vw, 48px);
-            line-height: 1.1;
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--text-primary), var(--text-muted));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: clamp(48px, 7vw, 84px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.6s ease 0.1s backwards;
         }
 
         .hero-subtitle {
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            max-width: 560px;
+            font-size: clamp(18px, 2.5vw, 22px);
+            color: var(--gray-600);
+            line-height: 1.6;
+            max-width: 720px;
+            margin-bottom: 48px;
+            animation: fadeInUp 0.6s ease 0.2s backwards;
         }
 
         .hero-cta-group {
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 80px;
+            animation: fadeInUp 0.6s ease 0.3s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-size: 15px;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.2s;
@@ -261,305 +214,225 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            box-shadow: 0 8px 24px rgba(249, 115, 22, 0.35);
+            background: var(--black);
+            color: var(--white);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.5);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--text-primary);
-            border-color: var(--border);
+            color: var(--black);
+            border-color: var(--gray-300);
         }
 
         .btn-secondary:hover {
-            background: var(--bg-secondary);
-            border-color: var(--primary);
+            border-color: var(--black);
         }
 
-        .hero-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            font-size: 13px;
-            color: var(--text-muted);
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            padding-top: 80px;
+            border-top: 1px solid var(--gray-200);
         }
 
-        .hero-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .stat {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
         }
 
-        /* HERO CARD (calculadora) */
-        .hero-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-        }
+        .stat:nth-child(1) { animation-delay: 0.4s; }
+        .stat:nth-child(2) { animation-delay: 0.5s; }
+        .stat:nth-child(3) { animation-delay: 0.6s; }
 
-        .hero-card-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--primary);
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1;
             margin-bottom: 8px;
-            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
-        .hero-card-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
+        .stat-label {
+            font-size: 15px;
+            color: var(--gray-600);
         }
 
-        .hero-card label {
-            display: block;
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
-        .hero-card input {
-            width: 100%;
-            padding: 12px 16px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            font-size: 14px;
-            font-family: inherit;
-        }
-
-        .hero-card input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .hero-card-result {
-            margin-top: 20px;
-            padding: 16px;
-            border-radius: 12px;
-            background: rgba(34, 197, 94, 0.08);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            display: none;
-        }
-
-        .hero-card-number {
-            font-size: 28px;
-            font-weight: 800;
-            color: #4ade80;
-            margin-bottom: 4px;
-        }
-
-        .hero-card-caption {
-            font-size: 12px;
-            color: #86efac;
-        }
-
-        /* SECCIONES GENERALES */
+        /* SECTIONS */
         section {
-            padding: 80px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
+            padding: 120px 40px;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
         .section-header {
-            text-align: center;
-            margin-bottom: 60px;
+            max-width: 720px;
+            margin-bottom: 80px;
         }
 
         .section-eyebrow {
-            font-size: 12px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--primary);
-            margin-bottom: 12px;
+            font-size: 14px;
             font-weight: 600;
-        }
-
-        .section-title {
-            font-size: clamp(28px, 4vw, 36px);
-            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-500);
             margin-bottom: 16px;
         }
 
+        .section-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
         .section-subtitle {
-            font-size: 16px;
-            color: var(--text-secondary);
-            max-width: 640px;
-            margin: 0 auto;
-        }
-
-        /* SERVICIOS */
-        .servicios {
-            background: var(--bg-secondary);
-        }
-
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .servicio-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 32px;
-            transition: all 0.3s;
-        }
-
-        .servicio-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-4px);
-        }
-
-        .servicio-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .servicio-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .servicio-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
+            font-size: 18px;
+            color: var(--gray-600);
             line-height: 1.6;
         }
 
-        /* PROCESO */
-        .proceso-timeline {
-            max-width: 800px;
-            margin: 0 auto;
+        /* BENEFICIOS */
+        .beneficios {
+            background: var(--gray-50);
         }
 
-        .proceso-step {
+        .beneficios-grid {
             display: grid;
-            grid-template-columns: 60px 1fr;
-            gap: 24px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .proceso-step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 29px;
-            top: 60px;
-            width: 2px;
-            height: calc(100% - 40px);
-            background: var(--border);
-        }
-
-        .proceso-number {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .proceso-content h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .proceso-content p {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        /* VENTAJAS */
-        .ventajas {
-            background: var(--bg-secondary);
-        }
-
-        .ventajas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
         }
 
-        .ventaja-item {
-            text-align: center;
-        }
-
-        .ventaja-icon {
-            width: 64px;
-            height: 64px;
+        .beneficio-card {
+            background: var(--white);
+            padding: 40px;
             border-radius: 16px;
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(168, 85, 247, 0.1));
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            margin: 0 auto 16px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
         }
 
-        .ventaja-item h4 {
+        .beneficio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+
+        .beneficio-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .beneficio-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .beneficio-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* PROCESO */
+        .proceso-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .proceso-step {
+            position: relative;
+        }
+
+        .proceso-number {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-400);
+            margin-bottom: 16px;
+        }
+
+        .proceso-step h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .proceso-step p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* GARANTÍA */
+        .garantia {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            border-radius: 24px;
+            padding: 80px 40px;
+        }
+
+        .garantia h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .garantia p {
             font-size: 18px;
-            margin-bottom: 8px;
+            color: var(--gray-400);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .ventaja-item p {
-            font-size: 14px;
-            color: var(--text-secondary);
+        .garantia-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: var(--white);
+            color: var(--black);
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 40px;
         }
 
         /* TESTIMONIOS */
         .testimonios-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
         }
 
-        .testimonio-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+        .testimonio {
+            background: var(--gray-50);
+            padding: 40px;
             border-radius: 16px;
-            padding: 28px;
+            border: 1px solid var(--gray-200);
         }
 
-        .testimonio-rating {
-            color: #fbbf24;
-            margin-bottom: 16px;
-            font-size: 18px;
+        .testimonio-stars {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
 
         .testimonio-text {
-            font-size: 14px;
-            color: var(--text-secondary);
+            font-size: 16px;
             line-height: 1.7;
-            margin-bottom: 20px;
+            color: var(--gray-700);
+            margin-bottom: 24px;
         }
 
         .testimonio-author {
@@ -569,193 +442,171 @@
         }
 
         .testimonio-avatar {
-            width: 44px;
-            height: 44px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: var(--black);
+            color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            color: white;
+            font-size: 18px;
         }
 
         .testimonio-info strong {
             display: block;
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 2px;
         }
 
         .testimonio-info span {
-            font-size: 12px;
-            color: var(--text-muted);
+            font-size: 13px;
+            color: var(--gray-500);
         }
 
-        /* CONTACTO */
-        .contacto {
-            background: var(--bg-secondary);
-        }
-
-        .form-wrapper {
-            max-width: 800px;
-            margin: 40px auto;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: var(--bg-card);
-        }
-
-        .form-placeholder {
-            padding: 60px 40px;
+        /* CTA FINAL */
+        .cta-final {
+            background: var(--gray-50);
             text-align: center;
+            padding: 120px 40px;
         }
 
-        .form-placeholder-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
+        .cta-final h2 {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
         }
 
-        .form-placeholder h3 {
+        .cta-final p {
             font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .form-placeholder p {
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .form-placeholder code {
-            display: block;
-            background: var(--bg-dark);
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 12px;
-            color: var(--primary);
-            font-family: 'Courier New', monospace;
-            text-align: left;
-            overflow-x: auto;
+            color: var(--gray-600);
+            margin-bottom: 48px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* FOOTER */
         footer {
-            background: var(--bg-dark);
-            border-top: 1px solid var(--border);
-            padding: 60px 20px 30px;
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 40px 40px;
         }
 
-        .footer-grid {
-            max-width: 1200px;
+        .footer-content {
+            max-width: 1280px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
         }
 
         .footer-col h4 {
             font-size: 14px;
-            margin-bottom: 16px;
-            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .footer-col p,
         .footer-col a {
-            font-size: 13px;
-            color: var(--text-muted);
+            font-size: 15px;
+            color: var(--gray-400);
             text-decoration: none;
             display: block;
-            margin-bottom: 8px;
-            line-height: 1.6;
+            margin-bottom: 12px;
+            line-height: 1.7;
         }
 
         .footer-col a:hover {
-            color: var(--text-primary);
+            color: var(--white);
         }
 
         .footer-bottom {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
+            padding-top: 40px;
+            border-top: 1px solid var(--gray-800);
             text-align: center;
-            font-size: 13px;
-            color: var(--text-muted);
+            color: var(--gray-500);
+            font-size: 14px;
         }
 
-        /* WHATSAPP FLOAT */
+        /* WHATSAPP */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
+            bottom: 32px;
+            right: 32px;
+            width: 64px;
+            height: 64px;
             background: #25d366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 32px;
             box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
             z-index: 999;
             text-decoration: none;
             transition: all 0.3s;
-            animation: pulse 2s infinite;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        /* SCROLL ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* RESPONSIVE */
-        @media (max-width: 968px) {
-            .nav-links {
+        @media (max-width: 768px) {
+            .nav-menu {
                 display: none;
             }
 
-            .hamburger {
-                display: flex;
+            .hero {
+                padding: 80px 24px 60px;
             }
 
-            .hero-container {
-                grid-template-columns: 1fr;
+            section {
+                padding: 80px 24px;
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
+            .nav-container {
+                padding: 0 24px;
             }
-        }
 
-        @media (max-width: 640px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 40px;
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 32px;
             }
 
-            .footer-grid {
+            .footer-content {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            .proceso-step {
-                grid-template-columns: 50px 1fr;
-                gap: 16px;
-            }
-
-            .proceso-number {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 32px;
             }
         }
     </style>
@@ -763,323 +614,288 @@
 <body>
 
     <!-- HEADER -->
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-mark">S</div>
-                <div class="logo-text">
-                    <span class="logo-name">Serpira Studio</span>
-                    <span class="logo-tagline">Web Design & Performance</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
+            <a href="#" class="logo">SERPIRA STUDIO</a>
+            <ul class="nav-menu">
+                <li><a href="#beneficios">Beneficios</a></li>
                 <li><a href="#proceso">Proceso</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#testimonios">Casos</a></li>
             </ul>
-            <button class="hamburger" aria-label="Menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <a href="#contacto" class="nav-cta">Comenzar Ahora</a>
         </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-container">
-            <div>
-                <span class="hero-eyebrow">Estudio web para negocios de servicios</span>
-                <h1>Convertimos tu sitio en un activo que vende, no en una tarjeta de presentación</h1>
-                <p class="hero-subtitle">
-                    Diseñamos y optimizamos sitios web estratégicos para que se conviertan en tu principal 
-                    canal de ventas: rápidos, claros y pensados para transformar visitas en consultas 
-                    todos los meses.
-                </p>
-                <div class="hero-cta-group">
-                    <a href="#contacto" class="btn btn-primary">Quiero una web que venda</a>
-                    <a href="#proceso" class="btn btn-secondary">Ver cómo trabajamos</a>
-                </div>
-                <div class="hero-meta">
-                    <div class="hero-meta-item">⚡ Entregas en 10–15 días</div>
-                    <div class="hero-meta-item">⭐ 4,9/5 satisfacción</div>
-                    <div class="hero-meta-item">🎯 Foco en conversión</div>
-                </div>
-            </div>
+        <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Disponibles para nuevos proyectos
+        </div>
 
-            <div class="hero-card">
-                <p class="hero-card-label">Proyección de resultados</p>
-                <h2 class="hero-card-title">¿Qué pasaría si tu web convirtiera?</h2>
-                <label for="leads-input">Leads que recibís por mes hoy</label>
-                <input type="number" id="leads-input" placeholder="Ej: 10" min="0">
-                <div class="hero-card-result" id="result-box">
-                    <p class="hero-card-number" id="result-number">0</p>
-                    <p class="hero-card-caption">leads/mes potenciales con un sitio optimizado</p>
-                </div>
+        <h1>
+            No Hacemos Páginas Web.<br>
+            Creamos Sistemas de<br>
+            Ventas Online.
+        </h1>
+
+        <p class="hero-subtitle">
+            Diseñamos sitios web estratégicos para empresas de servicios que quieren más 
+            clientes, no solo "estar presentes" en internet. Entrega en 21 días. 
+            Garantía de resultados.
+        </p>
+
+        <div class="hero-cta-group">
+            <a href="#contacto" class="btn btn-primary">
+                Reservar Consulta Gratuita →
+            </a>
+            <a href="#proceso" class="btn btn-secondary">
+                Ver Cómo Trabajamos
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Proyectos completados</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">21 días</div>
+                <div class="stat-label">Tiempo promedio de entrega</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Clientes satisfechos</div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS -->
-    <section class="servicios" id="servicios">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Nuestros Servicios</p>
-                <h2 class="section-title">Soluciones Web Estratégicas</h2>
-                <p class="section-subtitle">
-                    Diseñamos, desarrollamos y optimizamos sitios web pensados para conseguir resultados reales.
-                </p>
+    <!-- BENEFICIOS -->
+    <section class="beneficios fade-in" id="beneficios">
+        <div class="section-header">
+            <p class="section-eyebrow">Por qué Serpira Studio</p>
+            <h2 class="section-title">
+                No Solo Diseñamos.<br>
+                Construimos Activos<br>
+                que Generan Ingresos.
+            </h2>
+            <p class="section-subtitle">
+                Tu web no es un gasto. Es tu mejor vendedor trabajando 24/7.
+            </p>
+        </div>
+
+        <div class="beneficios-grid">
+            <div class="beneficio-card">
+                <div class="beneficio-icon">⚡</div>
+                <h3>Lanzamiento en 21 Días</h3>
+                <p>No esperás meses. Tu sitio está en vivo en 3 semanas. Sin demoras ni excusas.</p>
             </div>
 
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <div class="servicio-icon">🌐</div>
-                    <h3>Sitios Web Estratégicos</h3>
-                    <p>Diseñamos sitios optimizados para SEO, velocidad y conversión. No solo bonitos: efectivos.</p>
-                </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">🎯</div>
+                <h3>Optimización para Conversión</h3>
+                <p>Cada elemento está diseñado para que los visitantes se conviertan en clientes. No solo para que "se vea lindo".</p>
+            </div>
 
-                <div class="servicio-card">
-                    <div class="servicio-icon">🛒</div>
-                    <h3>E-commerce</h3>
-                    <p>Tiendas online completas con carrito, pagos y gestión de productos para vender más.</p>
-                </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">🔍</div>
+                <h3>SEO Integrado</h3>
+                <p>Configuramos todo para que Google te encuentre. Meta tags, estructura, velocidad. Sin paquetes extra.</p>
+            </div>
 
-                <div class="servicio-card">
-                    <div class="servicio-icon">📱</div>
-                    <h3>Landing Pages</h3>
-                    <p>Páginas enfocadas 100% en conversión para campañas, lanzamientos y captación de leads.</p>
-                </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">📱</div>
+                <h3>100% Responsive</h3>
+                <p>Tu web funciona perfecto en cualquier dispositivo. Celular, tablet, desktop. Sin excepciones.</p>
+            </div>
 
-                <div class="servicio-card">
-                    <div class="servicio-icon">🔧</div>
-                    <h3>Mantenimiento Web</h3>
-                    <p>Actualizaciones, optimización continua y soporte técnico para que tu web esté siempre activa.</p>
-                </div>
+            <div class="beneficio-card">
+                <div class="beneficio-icon">⚙️</div>
+                <h3>Mantenimiento Incluido</h3>
+                <p>Los primeros 30 días hacemos todos los ajustes que necesites. Gratis. Sin letra chica.</p>
+            </div>
+
+            <div class="beneficio-card">
+                <div class="beneficio-icon">🔒</div>
+                <h3>Seguridad Total</h3>
+                <p>SSL, backups automáticos y protección contra ataques. Tu web está blindada desde el día uno.</p>
             </div>
         </div>
     </section>
 
     <!-- PROCESO -->
-    <section class="proceso" id="proceso">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Cómo Trabajamos</p>
-                <h2 class="section-title">Proceso Simple, Resultados Claros</h2>
-                <p class="section-subtitle">
-                    Desde la primera llamada hasta el lanzamiento, cada paso está pensado para darte claridad y seguridad.
-                </p>
+    <section class="proceso fade-in" id="proceso">
+        <div class="section-header">
+            <p class="section-eyebrow">Cómo Trabajamos</p>
+            <h2 class="section-title">
+                Proceso Simple.<br>
+                Resultados Claros.
+            </h2>
+        </div>
+
+        <div class="proceso-grid">
+            <div class="proceso-step">
+                <div class="proceso-number">01</div>
+                <h3>Consulta Estratégica</h3>
+                <p>Llamada de 30 minutos donde analizamos tu negocio, objetivos y competencia. Te damos un plan claro.</p>
             </div>
 
-            <div class="proceso-timeline">
-                <div class="proceso-step">
-                    <div class="proceso-number">1</div>
-                    <div class="proceso-content">
-                        <h3>Consultoría Inicial (Gratis)</h3>
-                        <p>Analizamos tu negocio, objetivos y competencia. Te proponemos una estrategia clara en 30 minutos.</p>
-                    </div>
-                </div>
+            <div class="proceso-step">
+                <div class="proceso-number">02</div>
+                <h3>Diseño y Estructura</h3>
+                <p>Creamos el diseño adaptado a tu marca. Aprobás cada sección antes de programar una sola línea.</p>
+            </div>
 
-                <div class="proceso-step">
-                    <div class="proceso-number">2</div>
-                    <div class="proceso-content">
-                        <h3>Diseño y Estructura</h3>
-                        <p>Creamos el diseño de tu web adaptado a tu marca. Revisás y aprobás cada sección antes de programar.</p>
-                    </div>
-                </div>
+            <div class="proceso-step">
+                <div class="proceso-number">03</div>
+                <h3>Desarrollo Rápido</h3>
+                <p>Programamos tu sitio con código limpio y optimizado. Todo listo en 2 semanas máximo.</p>
+            </div>
 
-                <div class="proceso-step">
-                    <div class="proceso-number">3</div>
-                    <div class="proceso-content">
-                        <h3>Desarrollo Optimizado</h3>
-                        <p>Programamos tu sitio con código limpio, rápido y optimizado para SEO y conversión.</p>
-                    </div>
-                </div>
-
-                <div class="proceso-step">
-                    <div class="proceso-number">4</div>
-                    <div class="proceso-content">
-                        <h3>Pruebas y Ajustes</h3>
-                        <p>Testeamos velocidad, seguridad, responsive y formularios. Hacemos los últimos ajustes que necesites.</p>
-                    </div>
-                </div>
-
-                <div class="proceso-step">
-                    <div class="proceso-number">5</div>
-                    <div class="proceso-content">
-                        <h3>Lanzamiento + Soporte</h3>
-                        <p>¡Tu web va al aire! Te capacitamos para que la uses y quedamos disponibles para soporte continuo.</p>
-                    </div>
-                </div>
+            <div class="proceso-step">
+                <div class="proceso-number">04</div>
+                <h3>Lanzamiento</h3>
+                <p>Tu web va al aire. Te damos capacitación y soporte los primeros 30 días sin cargo adicional.</p>
             </div>
         </div>
     </section>
 
-    <!-- VENTAJAS -->
-    <section class="ventajas">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Lo Que Nos Diferencia</p>
-                <h2 class="section-title">Diseñamos Para Resultados</h2>
-            </div>
-
-            <div class="ventajas-grid">
-                <div class="ventaja-item">
-                    <div class="ventaja-icon">⚡</div>
-                    <h4>Velocidad Optimizada</h4>
-                    <p>Carga en menos de 2 segundos. Google premia la velocidad con mejor posicionamiento.</p>
-                </div>
-
-                <div class="ventaja-item">
-                    <div class="ventaja-icon">📱</div>
-                    <h4>100% Responsive</h4>
-                    <p>Tu web se ve perfecta en celulares, tablets y computadoras. Sin excepciones.</p>
-                </div>
-
-                <div class="ventaja-item">
-                    <div class="ventaja-icon">🔍</div>
-                    <h4>SEO Integrado</h4>
-                    <p>Configuración completa para que Google te encuentre: títulos, metas, estructura.</p>
-                </div>
-
-                <div class="ventaja-item">
-                    <div class="ventaja-icon">🔒</div>
-                    <h4>Seguridad Total</h4>
-                    <p>Certificado SSL, protección contra hackeos y backups automáticos.</p>
-                </div>
-
-                <div class="ventaja-item">
-                    <div class="ventaja-icon">📊</div>
-                    <h4>Analytics Integrado</h4>
-                    <p>Medimos todo: visitas, conversiones, origen del tráfico. Data real para mejorar.</p>
-                </div>
-
-                <div class="ventaja-item">
-                    <div class="ventaja-icon">🤝</div>
-                    <h4>Soporte Real</h4>
-                    <p>No desaparecemos después del lanzamiento. Estamos siempre que nos necesites.</p>
-                </div>
-            </div>
+    <!-- GARANTÍA -->
+    <section class="garantia fade-in">
+        <div class="garantia-badge">
+            ✓ Garantía de 30 Días
         </div>
+        <h2>
+            Si No Estás 100% Satisfecho,<br>
+            Hacemos Cambios Hasta Que Lo Estés.
+        </h2>
+        <p>
+            No cobramos un centavo extra por ajustes en los primeros 30 días. 
+            Tu éxito es nuestro éxito.
+        </p>
+        <a href="#contacto" class="btn btn-primary">
+            Empezar Mi Proyecto →
+        </a>
     </section>
 
     <!-- TESTIMONIOS -->
-    <section class="testimonios" id="testimonios">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Casos Reales</p>
-                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+    <section class="testimonios fade-in" id="testimonios">
+        <div class="section-header">
+            <p class="section-eyebrow">Casos Reales</p>
+            <h2 class="section-title">
+                Lo Que Dicen<br>
+                Nuestros Clientes.
+            </h2>
+        </div>
+
+        <div class="testimonios-grid">
+            <div class="testimonio">
+                <div class="testimonio-stars">★★★★★</div>
+                <p class="testimonio-text">
+                    "Desde que tenemos la web, las consultas se triplicaron. El sitio es rápido, 
+                    claro y realmente convierte. Inversión que se pagó sola en 2 meses."
+                </p>
+                <div class="testimonio-author">
+                    <div class="testimonio-avatar">M</div>
+                    <div class="testimonio-info">
+                        <strong>María González</strong>
+                        <span>Estudio Contable - CABA</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="testimonios-grid">
-                <div class="testimonio-card">
-                    <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonio-text">
-                        "Desde que tenemos la web, las consultas aumentaron un montón. Se ve muy profesional y es súper rápida."
-                    </p>
-                    <div class="testimonio-author">
-                        <div class="testimonio-avatar">M</div>
-                        <div class="testimonio-info">
-                            <strong>María González</strong>
-                            <span>Estudio Contable</span>
-                        </div>
+            <div class="testimonio">
+                <div class="testimonio-stars">★★★★★</div>
+                <p class="testimonio-text">
+                    "Profesionales de verdad. Me guiaron en todo el proceso y la web quedó 
+                    exactamente como la imaginaba. Ahora tengo una máquina de conseguir pacientes."
+                </p>
+                <div class="testimonio-author">
+                    <div class="testimonio-avatar">J</div>
+                    <div class="testimonio-info">
+                        <strong>Dr. Jorge López</strong>
+                        <span>Consultorio Médico - Zona Norte</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="testimonio-card">
-                    <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonio-text">
-                        "Muy profesionales. Me ayudaron en todo el proceso y la web quedó exactamente como la quería. Recomendables."
-                    </p>
-                    <div class="testimonio-author">
-                        <div class="testimonio-avatar">J</div>
-                        <div class="testimonio-info">
-                            <strong>Jorge López</strong>
-                            <span>Consultorio Médico</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonio-card">
-                    <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonio-text">
-                        "La mejor inversión para mi negocio. Ahora recibo consultas todos los días y la web se ve impecable en el celu."
-                    </p>
-                    <div class="testimonio-author">
-                        <div class="testimonio-avatar">C</div>
-                        <div class="testimonio-info">
-                            <strong>Carla Pérez</strong>
-                            <span>Coach Fitness</span>
-                        </div>
+            <div class="testimonio">
+                <div class="testimonio-stars">★★★★★</div>
+                <p class="testimonio-text">
+                    "La mejor inversión para mi negocio. Recibo consultas todos los días y 
+                    la web se ve impecable en el celular. Súper recomendables."
+                </p>
+                <div class="testimonio-author">
+                    <div class="testimonio-avatar">C</div>
+                    <div class="testimonio-info">
+                        <strong>Carla Pérez</strong>
+                        <span>Coach - Buenos Aires</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section class="contacto" id="contacto">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Hablemos</p>
-                <h2 class="section-title">Comenzá Tu Proyecto Hoy</h2>
-                <p class="section-subtitle">
-                    Completá el formulario y te respondemos en menos de 24 horas.
-                </p>
-            </div>
+    <!-- CTA FINAL -->
+    <section class="cta-final fade-in" id="contacto">
+        <h2>
+            ¿Listo Para Tener un Sitio<br>
+            que Trabaje Para Vos?
+        </h2>
+        <p>
+            Agenda una consultoría gratuita de 30 minutos. Sin compromiso.<br>
+            Analizamos tu proyecto y te damos un plan claro.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/5491173640915?text=Hola%20Serpira%20Studio!%20Quiero%20una%20consulta%20gratuita%20para%20mi%20web" 
+               class="btn btn-primary" 
+               target="_blank">
+                Contactar por WhatsApp →
+            </a>
+            <a href="mailto:hola@serpirastudio.com" class="btn btn-secondary">
+                Enviar Email
+            </a>
+        </div>
 
-            <div class="form-wrapper">
-                <!-- TODO: Reemplazar con iframe de Google Forms -->
-                <div class="form-placeholder">
-                    <div class="form-placeholder-icon">📝</div>
-                    <h3>Formulario de Contacto</h3>
-                    <p>Para agregar tu Google Form aquí, seguí estos pasos:</p>
-                    <code>
-1. Andá a forms.google.com<br>
-2. Creá un formulario nuevo<br>
-3. Click en "Enviar" > Ícono "&lt; &gt;"<br>
-4. Copiá el código iframe<br>
-5. Pegalo aquí reemplazando este placeholder
-                    </code>
-                </div>
-                <!-- 
-                Pegá tu iframe de Google Forms aquí:
-                <iframe src="https://docs.google.com/forms/d/e/TU-ID-AQUI/viewform?embedded=true" width="100%" height="900" frameborder="0">Cargando…</iframe>
-                -->
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="color: var(--text-muted); margin-bottom: 20px;">O escribinos directamente:</p>
-                <a href="https://wa.me/5491173640915?text=Hola%20Serpira%20Studio!%20Quiero%20consultar%20por%20una%20web%20para%20mi%20negocio" 
-                   class="btn btn-primary" 
-                   target="_blank">
-                    💬 WhatsApp: +54 9 11 7364-0915
-                </a>
-            </div>
+        <!-- PLACEHOLDER GOOGLE FORM -->
+        <div style="margin-top: 80px; padding: 60px; background: white; border-radius: 20px; border: 2px dashed var(--gray-300);">
+            <h3 style="font-size: 24px; margin-bottom: 16px;">📝 Formulario de Contacto</h3>
+            <p style="color: var(--gray-600); margin-bottom: 24px;">
+                Para agregar tu Google Form, seguí estos pasos:<br>
+                1. Creá tu formulario en forms.google.com<br>
+                2. Enviar > Ícono &lt; &gt; (embed)<br>
+                3. Copiá el código iframe<br>
+                4. Pegalo aquí en la línea 730 del HTML
+            </p>
+            <code style="display: block; background: var(--gray-100); padding: 16px; border-radius: 8px; font-size: 13px; font-family: monospace; color: var(--gray-700);">
+&lt;iframe src="https://docs.google.com/forms/d/e/TU-ID/viewform?embedded=true" width="100%" height="900"&gt;&lt;/iframe&gt;
+            </code>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-grid">
+        <div class="footer-content">
             <div class="footer-col">
                 <h4>Serpira Studio</h4>
-                <p>Estudio de diseño web estratégico para negocios de servicios en Argentina.</p>
-                <p>Convertimos sitios en activos que venden.</p>
+                <p>
+                    Diseño web estratégico para empresas de servicios.<br>
+                    No hacemos páginas. Creamos sistemas de ventas online.
+                </p>
             </div>
 
             <div class="footer-col">
                 <h4>Servicios</h4>
-                <a href="#servicios">Sitios Web</a>
-                <a href="#servicios">E-commerce</a>
-                <a href="#servicios">Landing Pages</a>
-                <a href="#servicios">Mantenimiento</a>
+                <a href="#beneficios">Sitios Web</a>
+                <a href="#beneficios">E-commerce</a>
+                <a href="#beneficios">Landing Pages</a>
+                <a href="#beneficios">Mantenimiento</a>
             </div>
 
             <div class="footer-col">
                 <h4>Empresa</h4>
                 <a href="#proceso">Proceso</a>
-                <a href="#testimonios">Testimonios</a>
+                <a href="#testimonios">Casos</a>
                 <a href="#contacto">Contacto</a>
             </div>
 
@@ -1096,32 +912,48 @@
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT BUTTON -->
-    <a href="https://wa.me/5491173640915?text=Hola%20Serpira%20Studio!%20Quiero%20consultar%20por%20diseño%20web" 
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5491173640915?text=Hola%20Serpira%20Studio!%20Quiero%20información%20sobre%20diseño%20web" 
        class="whatsapp-float" 
-       target="_blank" 
+       target="_blank"
        aria-label="WhatsApp">
         💬
     </a>
 
     <script>
-        // Calculadora de leads
-        const leadsInput = document.getElementById('leads-input');
-        const resultBox = document.getElementById('result-box');
-        const resultNumber = document.getElementById('result-number');
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        if (leadsInput) {
-            leadsInput.addEventListener('input', (e) => {
-                const current = parseFloat(e.target.value) || 0;
-                if (current <= 0) {
-                    resultBox.style.display = 'none';
-                    return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
-                const projected = Math.round(current * 2.5);
-                resultNumber.textContent = projected + '+';
-                resultBox.style.display = 'block';
             });
-        }
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
