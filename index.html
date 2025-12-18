@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Serpira Studio | Diseño Web Estratégico para Empresas de Servicios</title>
+    <title>Serpira Studio | Diseño Web Estratégico que Genera Ventas</title>
     <meta name="description" content="No hacemos páginas web. Creamos sistemas de ventas online. Diseño web estratégico para empresas de servicios en Argentina. Entrega en 21 días.">
-    <meta name="keywords" content="diseño web argentina, sitios web que convierten, desarrollo web estratégico, páginas web profesionales">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Serpira Studio | Sistemas de Ventas Online">
-    <meta property="og:description" content="Diseño web estratégico para empresas de servicios. No páginas bonitas, sistemas que venden.">
-    <meta property="og:type" content="website">
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23fff'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='%23000' font-family='Arial' font-weight='700'>S</text></svg>">
@@ -21,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <style>
         * {
@@ -58,17 +56,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
             padding: 24px 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .header.scrolled {
-            padding: 16px 0;
-            background: rgba(0, 0, 0, 0.95);
         }
 
         .nav-container {
@@ -86,11 +78,6 @@
             color: var(--text-primary);
             text-decoration: none;
             letter-spacing: -0.02em;
-            transition: opacity 0.3s;
-        }
-
-        .logo:hover {
-            opacity: 0.7;
         }
 
         .nav-menu {
@@ -105,26 +92,10 @@
             font-size: 15px;
             font-weight: 500;
             transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--text-primary);
-            transition: width 0.3s ease;
         }
 
         .nav-menu a:hover {
             color: var(--text-primary);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
         }
 
         .nav-cta {
@@ -135,7 +106,7 @@
             font-weight: 600;
             font-size: 14px;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
         }
 
         .nav-cta:hover {
@@ -169,6 +140,10 @@
             margin-left: auto;
             margin-right: auto;
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .hero-badge {
@@ -182,8 +157,7 @@
             font-size: 13px;
             font-weight: 600;
             margin-bottom: 48px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.2s forwards;
+            width: fit-content;
         }
 
         .hero-badge-dot {
@@ -191,18 +165,6 @@
             height: 8px;
             background: #22c55e;
             border-radius: 50%;
-            animation: pulse 2s ease infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% { 
-                opacity: 0.5;
-                transform: scale(1.2);
-            }
         }
 
         .hero h1 {
@@ -211,8 +173,6 @@
             line-height: 0.95;
             letter-spacing: -0.04em;
             margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.3s forwards;
         }
 
         .hero-subtitle {
@@ -222,8 +182,6 @@
             max-width: 720px;
             margin-bottom: 56px;
             font-weight: 400;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.4s forwards;
         }
 
         .hero-cta-group {
@@ -231,19 +189,6 @@
             gap: 16px;
             flex-wrap: wrap;
             margin-bottom: 120px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.5s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .btn {
@@ -255,7 +200,7 @@
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
             border: 2px solid transparent;
         }
 
@@ -287,19 +232,6 @@
             padding-top: 80px;
             border-top: 1px solid var(--border);
         }
-
-        .stat {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .stat.visible {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .stat:nth-child(1) { animation-delay: 0.1s; }
-        .stat:nth-child(2) { animation-delay: 0.2s; }
-        .stat:nth-child(3) { animation-delay: 0.3s; }
 
         .stat-number {
             font-size: clamp(48px, 6vw, 72px);
@@ -368,14 +300,7 @@
             padding: 48px;
             border-radius: 20px;
             border: 1px solid var(--border);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .beneficio-card.visible {
-            opacity: 1;
-            transform: translateY(0);
+            transition: all 0.5s;
         }
 
         .beneficio-card:hover {
@@ -417,14 +342,6 @@
             grid-template-columns: 120px 1fr;
             gap: 48px;
             align-items: start;
-            opacity: 0;
-            transform: translateX(-40px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .proceso-step.visible {
-            opacity: 1;
-            transform: translateX(0);
         }
 
         .proceso-number {
@@ -434,6 +351,7 @@
             color: transparent;
             -webkit-text-stroke: 1px var(--border);
             letter-spacing: -0.05em;
+            transition: all 0.5s;
         }
 
         .proceso-step:hover .proceso-number {
@@ -463,16 +381,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .garantia::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
         }
 
         .garantia-badge {
@@ -517,14 +425,6 @@
             padding: 48px;
             border-radius: 20px;
             border: 1px solid var(--border);
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .testimonio.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .testimonio-stars {
@@ -660,17 +560,12 @@
             box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
             z-index: 999;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.15);
             box-shadow: 0 16px 56px rgba(37, 211, 102, 0.6);
-        }
-
-        /* PARALLAX & SCROLL EFFECTS */
-        .parallax {
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* RESPONSIVE */
@@ -698,10 +593,6 @@
             .proceso-step {
                 grid-template-columns: 80px 1fr;
                 gap: 32px;
-            }
-
-            .proceso-number {
-                font-size: 64px;
             }
 
             .footer-content {
@@ -765,25 +656,25 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-badge">
+        <div class="hero-badge" data-animate="badge">
             <span class="hero-badge-dot"></span>
             Disponibles para nuevos proyectos
         </div>
 
-        <h1 class="parallax" data-speed="0.5">
+        <h1 data-animate="title">
             No Hacemos<br>
             Páginas Web.<br>
             Creamos Sistemas<br>
             de Ventas Online.
         </h1>
 
-        <p class="hero-subtitle parallax" data-speed="0.3">
+        <p class="hero-subtitle" data-animate="subtitle">
             Diseñamos sitios web estratégicos para empresas de servicios que quieren 
             más clientes, no solo "estar presentes" en internet. Entrega en 21 días. 
             Garantía de resultados.
         </p>
 
-        <div class="hero-cta-group">
+        <div class="hero-cta-group" data-animate="ctas">
             <a href="#contacto" class="btn btn-primary">
                 Reservar Consulta Gratuita →
             </a>
@@ -792,17 +683,17 @@
             </a>
         </div>
 
-        <div class="hero-stats">
+        <div class="hero-stats" data-animate="stats">
             <div class="stat">
-                <div class="stat-number">50+</div>
+                <div class="stat-number" data-count="50">0</div>
                 <div class="stat-label">Proyectos completados</div>
             </div>
             <div class="stat">
-                <div class="stat-number">21</div>
+                <div class="stat-number" data-count="21">0</div>
                 <div class="stat-label">Días de entrega promedio</div>
             </div>
             <div class="stat">
-                <div class="stat-number">100%</div>
+                <div class="stat-number" data-count="100">0</div>
                 <div class="stat-label">Clientes satisfechos</div>
             </div>
         </div>
@@ -810,7 +701,7 @@
 
     <!-- BENEFICIOS -->
     <section class="beneficios" id="beneficios">
-        <div class="section-header">
+        <div class="section-header" data-animate="section-header">
             <p class="section-eyebrow">Por qué Serpira Studio</p>
             <h2 class="section-title">
                 No Solo Diseñamos.<br>
@@ -823,37 +714,37 @@
         </div>
 
         <div class="beneficios-grid">
-            <div class="beneficio-card scroll-trigger">
+            <div class="beneficio-card" data-animate="card">
                 <span class="beneficio-icon">⚡</span>
                 <h3>Lanzamiento en 21 Días</h3>
                 <p>No esperás meses. Tu sitio está en vivo en 3 semanas. Sin demoras ni excusas.</p>
             </div>
 
-            <div class="beneficio-card scroll-trigger">
+            <div class="beneficio-card" data-animate="card">
                 <span class="beneficio-icon">🎯</span>
                 <h3>Optimización para Conversión</h3>
                 <p>Cada elemento está diseñado para que los visitantes se conviertan en clientes. No solo para que "se vea lindo".</p>
             </div>
 
-            <div class="beneficio-card scroll-trigger">
+            <div class="beneficio-card" data-animate="card">
                 <span class="beneficio-icon">🔍</span>
                 <h3>SEO Integrado</h3>
                 <p>Configuramos todo para que Google te encuentre. Meta tags, estructura, velocidad. Sin paquetes extra.</p>
             </div>
 
-            <div class="beneficio-card scroll-trigger">
+            <div class="beneficio-card" data-animate="card">
                 <span class="beneficio-icon">📱</span>
                 <h3>100% Responsive</h3>
                 <p>Tu web funciona perfecto en cualquier dispositivo. Celular, tablet, desktop. Sin excepciones.</p>
             </div>
 
-            <div class="beneficio-card scroll-trigger">
+            <div class="beneficio-card" data-animate="card">
                 <span class="beneficio-icon">⚙️</span>
                 <h3>Mantenimiento Incluido</h3>
                 <p>Los primeros 30 días hacemos todos los ajustes que necesites. Gratis. Sin letra chica.</p>
             </div>
 
-            <div class="beneficio-card scroll-trigger">
+            <div class="beneficio-card" data-animate="card">
                 <span class="beneficio-icon">🔒</span>
                 <h3>Seguridad Total</h3>
                 <p>SSL, backups automáticos y protección contra ataques. Tu web está blindada desde el día uno.</p>
@@ -863,7 +754,7 @@
 
     <!-- PROCESO -->
     <section class="proceso" id="proceso">
-        <div class="section-header">
+        <div class="section-header" data-animate="section-header">
             <p class="section-eyebrow">Cómo Trabajamos</p>
             <h2 class="section-title">
                 Proceso Simple.<br>
@@ -872,7 +763,7 @@
         </div>
 
         <div class="proceso-grid">
-            <div class="proceso-step scroll-trigger">
+            <div class="proceso-step" data-animate="step">
                 <div class="proceso-number">01</div>
                 <div class="proceso-content">
                     <h3>Consulta Estratégica</h3>
@@ -880,7 +771,7 @@
                 </div>
             </div>
 
-            <div class="proceso-step scroll-trigger">
+            <div class="proceso-step" data-animate="step">
                 <div class="proceso-number">02</div>
                 <div class="proceso-content">
                     <h3>Diseño y Estructura</h3>
@@ -888,7 +779,7 @@
                 </div>
             </div>
 
-            <div class="proceso-step scroll-trigger">
+            <div class="proceso-step" data-animate="step">
                 <div class="proceso-number">03</div>
                 <div class="proceso-content">
                     <h3>Desarrollo Optimizado</h3>
@@ -896,7 +787,7 @@
                 </div>
             </div>
 
-            <div class="proceso-step scroll-trigger">
+            <div class="proceso-step" data-animate="step">
                 <div class="proceso-number">04</div>
                 <div class="proceso-content">
                     <h3>Lanzamiento y Soporte</h3>
@@ -907,7 +798,7 @@
     </section>
 
     <!-- GARANTÍA -->
-    <section class="garantia scroll-trigger">
+    <section class="garantia" data-animate="garantia">
         <div class="garantia-badge">
             ✓ Garantía de 30 Días
         </div>
@@ -926,7 +817,7 @@
 
     <!-- TESTIMONIOS -->
     <section class="testimonios" id="testimonios">
-        <div class="section-header">
+        <div class="section-header" data-animate="section-header">
             <p class="section-eyebrow">Casos Reales</p>
             <h2 class="section-title">
                 Lo Que Dicen<br>
@@ -935,7 +826,7 @@
         </div>
 
         <div class="testimonios-grid">
-            <div class="testimonio scroll-trigger">
+            <div class="testimonio" data-animate="card">
                 <div class="testimonio-stars">★★★★★</div>
                 <p class="testimonio-text">
                     "Desde que tenemos la web, las consultas se triplicaron. El sitio es rápido, 
@@ -950,7 +841,7 @@
                 </div>
             </div>
 
-            <div class="testimonio scroll-trigger">
+            <div class="testimonio" data-animate="card">
                 <div class="testimonio-stars">★★★★★</div>
                 <p class="testimonio-text">
                     "Profesionales de verdad. Me guiaron en todo el proceso y la web quedó 
@@ -965,7 +856,7 @@
                 </div>
             </div>
 
-            <div class="testimonio scroll-trigger">
+            <div class="testimonio" data-animate="card">
                 <div class="testimonio-stars">★★★★★</div>
                 <p class="testimonio-text">
                     "La mejor inversión para mi negocio. Recibo consultas todos los días y 
@@ -984,15 +875,15 @@
 
     <!-- CTA FINAL -->
     <section class="cta-final" id="contacto">
-        <h2>
+        <h2 data-animate="cta-title">
             ¿Listo Para Tener un Sitio<br>
             que Trabaje Para Vos?
         </h2>
-        <p>
+        <p data-animate="cta-text">
             Agenda una consultoría gratuita de 30 minutos. Sin compromiso.<br>
             Analizamos tu proyecto y te damos un plan claro.
         </p>
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 80px;">
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 80px;" data-animate="cta-buttons">
             <a href="https://wa.me/5491173640915?text=Hola%20Serpira%20Studio!%20Quiero%20una%20consulta%20gratuita" 
                class="btn btn-primary" 
                target="_blank">
@@ -1001,21 +892,6 @@
             <a href="mailto:hola@serpirastudio.com" class="btn btn-secondary">
                 Enviar Email
             </a>
-        </div>
-
-        <!-- PLACEHOLDER GOOGLE FORM -->
-        <div style="max-width: 900px; margin: 0 auto; padding: 64px; background: var(--bg-card); border-radius: 24px; border: 2px dashed var(--border);">
-            <h3 style="font-size: 28px; margin-bottom: 20px; font-weight: 700;">📝 Formulario de Contacto</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 32px; font-size: 16px; line-height: 1.7;">
-                Para agregar tu Google Form:<br><br>
-                1. Creá tu formulario en <strong>forms.google.com</strong><br>
-                2. Click en <strong>Enviar</strong> > Ícono <strong>&lt; &gt;</strong> (embed)<br>
-                3. Copiá el código iframe<br>
-                4. Pegalo en la línea <strong>~850</strong> del HTML reemplazando este bloque
-            </p>
-            <code style="display: block; background: var(--bg-primary); padding: 24px; border-radius: 12px; font-size: 13px; font-family: 'Courier New', monospace; color: var(--text-secondary); overflow-x: auto;">
-&lt;iframe src="https://docs.google.com/forms/d/e/TU-ID-AQUI/viewform?embedded=true" width="100%" height="900" frameborder="0" style="border-radius: 12px;"&gt;Cargando…&lt;/iframe&gt;
-            </code>
         </div>
     </section>
 
@@ -1066,60 +942,274 @@
         💬
     </a>
 
+    <!-- ========== GSAP ANIMATIONS ========== -->
     <script>
-        // ========== INTERSECTION OBSERVER - SCROLL ANIMATIONS ==========
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        gsap.registerPlugin(ScrollTrigger);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
+        // ========== HERO ANIMATIONS ==========
 
-        // Observar todos los elementos con clase scroll-trigger
-        document.querySelectorAll('.scroll-trigger').forEach(el => {
-            observer.observe(el);
+        // Badge fade in
+        gsap.from('[data-animate="badge"]', {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: 'power3.out',
+            delay: 0.2
         });
 
-        // Observar stats
-        document.querySelectorAll('.stat').forEach(el => {
-            observer.observe(el);
+        // Title - líneas aparecen una por una con parallax
+        const titleLines = document.querySelector('[data-animate="title"]').innerHTML.split('<br>');
+        document.querySelector('[data-animate="title"]').innerHTML = titleLines.map(line => 
+            `<span style="display: block; overflow: hidden;"><span class="line">${line}</span></span>`
+        ).join('');
+
+        gsap.from('.line', {
+            y: 200,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: 'power4.out',
+            delay: 0.3
+        });
+
+        // Parallax del título al hacer scroll
+        gsap.to('[data-animate="title"]', {
+            y: 150,
+            opacity: 0.3,
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1.5
+            }
+        });
+
+        // Subtitle con parallax diferente
+        gsap.from('[data-animate="subtitle"]', {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            ease: 'power3.out',
+            delay: 0.8
+        });
+
+        gsap.to('[data-animate="subtitle"]', {
+            y: 80,
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            }
+        });
+
+        // CTAs
+        gsap.from('[data-animate="ctas"]', {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: 'power3.out',
+            delay: 1
+        });
+
+        // Stats con contador animado
+        const stats = document.querySelectorAll('.stat-number');
+
+        gsap.from('[data-animate="stats"]', {
+            opacity: 0,
+            y: 60,
+            duration: 1.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '[data-animate="stats"]',
+                start: 'top 80%'
+            },
+            onComplete: () => {
+                // Animar números
+                stats.forEach(stat => {
+                    const target = parseInt(stat.dataset.count);
+                    gsap.to(stat, {
+                        innerHTML: target,
+                        duration: 2,
+                        snap: { innerHTML: 1 },
+                        ease: 'power1.out'
+                    });
+                });
+            }
+        });
+
+        // ========== SECTION HEADERS ==========
+        document.querySelectorAll('[data-animate="section-header"]').forEach(header => {
+            gsap.from(header.children, {
+                opacity: 0,
+                y: 80,
+                duration: 1.2,
+                stagger: 0.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: header,
+                    start: 'top 75%'
+                }
+            });
+        });
+
+        // ========== BENEFICIOS CARDS ==========
+        gsap.from('[data-animate="card"]', {
+            opacity: 0,
+            y: 100,
+            scale: 0.9,
+            duration: 1,
+            stagger: {
+                amount: 0.6,
+                from: 'start'
+            },
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.beneficios-grid',
+                start: 'top 70%'
+            }
+        });
+
+        // Parallax en cards
+        document.querySelectorAll('.beneficio-card').forEach((card, i) => {
+            gsap.to(card, {
+                y: -30 * (i % 2 === 0 ? 1 : -1),
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 2
+                }
+            });
+        });
+
+        // ========== PROCESO STEPS ==========
+        document.querySelectorAll('[data-animate="step"]').forEach((step, i) => {
+            // Números aparecen con stroke
+            const number = step.querySelector('.proceso-number');
+            gsap.from(number, {
+                scale: 0.5,
+                opacity: 0,
+                duration: 1,
+                ease: 'back.out(2)',
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top 75%'
+                }
+            });
+
+            // Contenido slide desde la izquierda
+            gsap.from(step.querySelector('.proceso-content'), {
+                x: -100,
+                opacity: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top 75%'
+                }
+            });
+
+            // Parallax en steps
+            gsap.to(step, {
+                x: i % 2 === 0 ? -50 : 50,
+                scrollTrigger: {
+                    trigger: step,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1.5
+                }
+            });
+        });
+
+        // ========== GARANTÍA ==========
+        gsap.from('[data-animate="garantia"]', {
+            opacity: 0,
+            scale: 0.95,
+            duration: 1.5,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '[data-animate="garantia"]',
+                start: 'top 70%'
+            }
+        });
+
+        // ========== TESTIMONIOS ==========
+        document.querySelectorAll('.testimonio').forEach((card, i) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 120,
+                rotation: i % 2 === 0 ? -5 : 5,
+                duration: 1.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%'
+                }
+            });
+
+            // Parallax suave
+            gsap.to(card, {
+                y: -40,
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 2
+                }
+            });
+        });
+
+        // ========== CTA FINAL ==========
+        gsap.from('[data-animate="cta-title"]', {
+            opacity: 0,
+            scale: 0.9,
+            y: 60,
+            duration: 1.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '[data-animate="cta-title"]',
+                start: 'top 75%'
+            }
+        });
+
+        gsap.from('[data-animate="cta-text"]', {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            delay: 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '[data-animate="cta-text"]',
+                start: 'top 75%'
+            }
+        });
+
+        gsap.from('[data-animate="cta-buttons"]', {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            delay: 0.4,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '[data-animate="cta-buttons"]',
+                start: 'top 75%'
+            }
         });
 
         // ========== HEADER SCROLL EFFECT ==========
-        const header = document.getElementById('header');
         let lastScroll = 0;
+        const header = document.getElementById('header');
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 80) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        gsap.to(header, {
+            backgroundColor: 'rgba(0, 0, 0, 0.95)',
+            padding: '16px 0',
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top -80',
+                end: 'top -81',
+                toggleActions: 'play none none reverse'
             }
-
-            lastScroll = currentScroll;
-        });
-
-        // ========== PARALLAX EFFECT ==========
-        const parallaxElements = document.querySelectorAll('.parallax');
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-
-            parallaxElements.forEach(el => {
-                const speed = el.dataset.speed || 0.5;
-                const yPos = -(scrolled * speed);
-                el.style.transform = `translateY(${yPos}px)`;
-            });
         });
 
         // ========== SMOOTH SCROLL ==========
@@ -1131,28 +1221,42 @@
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 40;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
+                    gsap.to(window, {
+                        duration: 1.5,
+                        scrollTo: {
+                            y: target,
+                            offsetY: 100
+                        },
+                        ease: 'power3.inOut'
                     });
                 }
             });
         });
 
-        // ========== CARD STAGGER ANIMATION ==========
-        const cards = document.querySelectorAll('.beneficio-card, .testimonio');
-        cards.forEach((card, index) => {
-            card.style.transitionDelay = `${index * 0.1}s`;
+        // ========== WHATSAPP FLOAT ANIMATION ==========
+        gsap.from('.whatsapp-float', {
+            scale: 0,
+            rotation: 360,
+            duration: 1,
+            ease: 'elastic.out(1, 0.5)',
+            delay: 1.5
         });
 
-        // ========== PROCESO STEPS STAGGER ==========
-        const steps = document.querySelectorAll('.proceso-step');
-        steps.forEach((step, index) => {
-            step.style.transitionDelay = `${index * 0.15}s`;
+        // Bounce infinito
+        gsap.to('.whatsapp-float', {
+            y: -10,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
         });
+
+        // ========== PERFORMANCE: Reducir animaciones en móvil ==========
+        if (window.innerWidth < 768) {
+            ScrollTrigger.getAll().forEach(trigger => {
+                trigger.kill();
+            });
+        }
     </script>
 
 </body>
